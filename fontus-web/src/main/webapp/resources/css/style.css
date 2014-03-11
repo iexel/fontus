@@ -1,0 +1,389 @@
+@import url('reset.css');
+
+/* My additions to the reset ---------------------------------------------- */
+
+body {
+	font-size: 10px;
+}
+
+a:active {
+	background-color: transparent;
+}
+
+a {
+	outline: none;
+}
+
+/* Page containers -------------------------------------------------------- */
+.b-page-container {
+	width: 100%;
+}
+
+.b-page-container .internal-container {
+	/* width: 900px; */
+	width: 100%;
+	margin: 0px auto;
+}
+
+/* Header ----------------------------------------------------------------- */
+.b-header {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	background-color: #007dba;
+}
+
+.b-header .logo1 {
+	position: absolute;
+	top: 30px;
+	left: 80px;
+}
+
+.b-header .logo1 a {
+	color: White;
+	font: italic bold 20px Arial;
+	text-decoration: none;
+	outline: none;
+}
+
+.b-header .logo2 {
+	position: absolute;
+	top: 55px;
+	left: 80px;
+}
+
+.b-header .logo2 a {
+	color: White;
+	font: italic 11px Arial;
+	text-decoration: none;
+	outline: none;
+}
+
+.b-header ul {
+	position: absolute;
+	bottom: 8px;
+	right: 10px;
+	height: 12px;
+	font-size: 12px;
+}
+
+.b-header li {
+	list-style-type: none;
+	display: inline;
+	border-right: 1px solid #88AAF9;
+	padding: 0px 12px;
+}
+
+.b-header .last-menu-item {
+	border-right-width: 0;
+	padding-right: 0;
+}
+
+.b-header li a {
+	color: White;
+	text-decoration: none;
+	font-family: Verdana;
+	border-width: 0;
+	text-align: left;
+	outline: none;
+}
+
+.b-header li a:hover {
+	text-decoration: underline;
+}
+
+/* Main menu ---------------------------------------------------------- */
+.b-main-menu {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	background-color: White;
+	height: 43px;
+}
+
+.b-main-menu .menu {
+	position: absolute;
+	bottom: 0px;
+	left: 10px;
+	border-right: 1px solid Silver;
+	border-top-right-radius: 10px;
+	height: 33px;
+}
+
+.b-main-menu .menu li {
+	float: left;
+	list-style-type: none;
+	display: inline;
+	height: 27px;
+	border: 1px solid Silver;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom: 0;
+	border-right: 0;
+	padding-top: 5px;
+	background: url("../img/menu-background.png") repeat scroll 0 0 transparent;
+}
+
+.b-main-menu .menu a {
+	color: #004165;
+	padding: 0px 20px 0px;
+	text-decoration: none;
+	font: 15px Helvetica;
+	outline: none;
+}
+
+.b-main-menu .menu a:hover {
+	text-decoration: underline;
+}
+
+.b-main-menu .menu .selected {
+	background: none;
+	background-color: #007dba;
+}
+
+.b-main-menu .menu .selected a {
+	color: White;
+}
+
+.b-main-menu .locale {
+	position: absolute;
+	bottom: 8px;
+	right: 30px;
+}
+
+.b-main-menu .locale li {
+	list-style-type: none;
+	display: inline;
+}
+
+.b-main-menu .locale li a {
+	outline: none;
+}
+
+/* Left, center and right panels ------------------------------------------------ */
+.b-panels {
+	position: relative;
+	width: 100%;
+	display: table;
+	border-top: 1px solid Silver;
+	border-bottom: 1px solid Silver;
+}
+
+.b-left-panel {
+	position: relative;
+	display: table-cell;
+	width: 190px;
+	vertical-align: top;
+	background-color: #007dba;
+}
+
+.b-left-panel ul {
+	position: absolute;
+	top: 40px;
+	width: 190px;
+	border-top: 1px solid Silver;
+}
+
+.b-left-panel ul li {
+	border-bottom: 1px solid Silver;
+	padding: 2px;
+	background: url("../img/menu-background.png") repeat scroll 0 0
+		transparent;
+}
+
+.b-left-panel ul li a {
+	color: #004165;
+	font: 14px Helvetica;
+	text-decoration: none;
+	outline: none;
+}
+
+.b-left-panel ul li a:hover {
+	text-decoration: underline;
+}
+
+.b-left-panel .selected {
+	background: none;
+	background-color: #B8DBEB;
+}
+
+.b-left-panel .place-holder {
+	height: 420px;
+	width: 190px;
+}
+
+.b-center-panel {
+	position: relative;
+	display: table-cell;
+	width: auto;
+	background-color: AliceBlue;
+	font: italic 14px Arial;
+	border: none;
+	vertical-align: top;
+	padding: 20px;
+	padding-bottom: 100px;
+}
+
+* html .b-center-panel {
+	float: left;
+}
+
+.b-center-panel .container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.b-center-panel .dataGrid {
+	position: absolute;
+}
+
+/* this rule makes jqGrid work with the CSS reset */
+.b-center-panel .ui-jqgrid table {
+	border-collapse: separate;
+}
+
+.b-center-panel .grid-col {
+	padding-right: 5px !important;
+	padding-left: 5px !important;
+}
+
+.b-center-panel .ui-jqgrid-bdiv {
+	scrollbar-arrow-color: black;
+	scrollbar-base-color: white;
+	scrollbar-face-color: white;
+/*	scrollbar-3dlight-color: ;
+	scrollbar-darkshadow-color: ;
+	scrollbar-highlight-color: ;
+	scrollbar-shadow-color: ;
+*/
+}
+
+.b-center-panel .ui-pg-input {
+	border: 1px;
+	border-color: #A6C9E2;
+	border-style: solid;
+	border-radius: 4px;
+}
+
+.b-center-panel button {
+	font-size: 10px;
+}
+
+.b-center-panel .error-message {
+	color: red;
+	margin-left: 30px; 
+}
+
+.b-right-panel {
+	position: relative;
+	display: table-cell;
+	width: 140px;
+	vertical-align: top;
+	background-color: #007dba;
+	/* background: linear-gradient(to right, #007dba, #5CB8E6); */
+}
+
+/* Footer --------------------------------------------------------------- */
+.b-footer {
+	height: 60px;
+	position: relative;
+	clear: both;
+	background-color: White;
+	font-size: 11px;
+}
+
+.b-footer ul {
+	position: absolute;
+	top: 30px;
+	left: 0;
+}
+
+.b-footer li {
+	list-style-type: none;
+	display: inline;
+	border-right: 1px solid #808080;
+	padding: 0px 12px;
+}
+
+.b-footer .last-menu-item {
+	border-right-width: 0;
+	padding-right: 0;
+}
+
+.b-footer li a {
+	color: #004165;
+	text-decoration: none;
+	font-family: Verdana;
+	border-width: 0;
+	text-align: left;
+	outline: none;
+}
+
+.b-footer li a:hover {
+	text-decoration: underline;
+}
+
+.b-error-page {
+	background-color: AliceBlue;
+}
+
+.b-error-page div {
+	text-align: center;
+	margin-top: 15%;
+	color: Black;
+	font: 14px Helvetica;
+}
+
+.b-error-page a {
+	text-decoration: none;
+	outline: none;
+}
+
+.b-error-page img {
+	position: relative;
+	top: 17px;
+	margin-right: 10px;
+}
+
+.b-login-page {
+	background-color: AliceBlue;
+}
+
+.b-login-page .login-form {
+	position: absolute;
+	height: 200px;
+	width: 400px;
+	margin: -100px 0 0 -200px;
+	top: 50%;
+	left: 50%;
+	font: 14px Helvetica;
+}
+
+.b-login-page .error-message {
+	width: 300px;
+	text-align: center;
+	height: 40px;
+	color: Red;
+}
+
+.b-login-page .tip-message {
+	width: 300px;
+	text-align: center;
+	margin-top: 40px;
+	color: Green;
+}
+
+.b-login-page .tip-message b {
+	font-weight: bold;
+}
+
+/* jQuery UI tools ----------------------------------------------------------------- */
+/* jQuery UI and jqGrid dinamically add some HTML content */
+/* outside any z- prefixed class */
+
+.jqgrid-error-icon {
+	position:relative;
+	top:5px;
+	margin-left:5px;
+}

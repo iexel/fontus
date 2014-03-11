@@ -1,0 +1,79 @@
+package net.myproject.rest;
+
+import java.util.List;
+import java.util.Locale;
+
+import net.myproject.jqgrid.AjaxError;
+import net.myproject.services.ServiceException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.http.HttpStatus;
+import org.springframework.validation.BindException;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ControllerAdvice("net.myproject.rest")
+public class GlobalControllerAdviceRest {
+
+	@Autowired
+	private MessageSource messageSource;
+
+	@ResponseBody
+	@ResponseStatus(HttpStatus.BAD_REQUEST)
+	@ExceptionHandler(BindException.class)
+	public AjaxError handle(BindException ex, Locale locale) {
+
+		BindingResult bindingResult = ex.getBindingResult();
+		AjaxError ajaxError = new AjaxError();
+		ajaxError.setValidationErrors(fetchValidationErrorsAsStringArray(bindingResult, locale));
+		ajaxError.setLocalErrorMessage(fetchErrorMessage("jggrid_validation_error_message", locale));
+		return ajaxError;
+	}
+
+	@ResponseBody
+	@ResponseStatus(HttpStatus.BAD_REQUEST)
+	@ExceptionHandler(ServiceException.class)
+	public AjaxError handle(ServiceException ex, Locale locale) {
+
+		AjaxError ajaxError = new AjaxError();
+		ajaxError.setLocalErrorMessage(fetchErrorMessage(ex.getErrorCode().toString(), locale));
+		return ajaxError;
+	}
+
+	@ResponseBody
+	@ResponseStatus(HttpStatus.BAD_REQUEST)
+	@ExceptionHandler(Throwable.class)
+	public AjaxError handle(Throwable ex) {
+
+		AjaxError ajaxError = new AjaxError();
+		ajaxError.setGlobalErrorCode("error_unexpected");
+		return ajaxError;
+	}
+
+	private String[] fetchValidationErrorsAsStringArray(BindingResult bindingResult, Locale locale) {
+
+		String[] errorArray = null;
+
+		if (bindingResult.hasErrors()) {
+			List<FieldError> errors = bindingResult.getFieldErrors();
+			errorArray = new String[errors.size() * 2];
+			int counter = 0;
+
+			for (FieldError error : errors) {
+				errorArray[counter] = error.getField();
+				errorArray[counter + 1] = messageSource.getMessage(error, locale);
+				counter += 2;
+			}
+		}
+		return errorArray;
+	}
+
+	private String fetchErrorMessage(String errorCode, Locale locale) {
+		return messageSource.getMessage(errorCode, null, "Unexpected error.", locale);
+	}
+}
