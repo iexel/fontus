@@ -7,7 +7,7 @@
 <html>
 
 <head>
-<title>Jump Boilerplate</title>
+<title>Fontus</title>
 <meta charset="UTF-8">
 <base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/" />
 <link href="resources/css/style.css" rel="stylesheet" type="text/css" />
