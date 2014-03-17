@@ -10,7 +10,7 @@ Why is it called Fontus? In the ancient Roman religion, Fontus was a god of well
 
 ###Online deployment
 
-You can check this web application online at http://demo.alexey.cloudbees.net (login: `admin`, password: `admin` for access to the protected pages). Usually, the first access to the URL is very slow as the server hibernates the application when it is not used. The free Java EE hosting on CloudBees provides very limited resources in other respect as well.
+You can check this web application online at http://demo.alexey.cloudbees.net (login: `admin`, password: `admin` for access to the protected pages). Usually, the first access to the URL is very slow as the server hibernates the application when it is not used. The free Java EE hosting at CloudBees provides very limited resources in other respect as well.
 
 ###Building the project
 
@@ -32,7 +32,7 @@ RESTful web services use RESTful URLs and appropriate web methods (`GET`, `POST`
 
 ####JqGrid 4.5.4
 
-jqGrid is an open source AJAX data grid which is based on jQuery and jQuery UI. It renders a grid using JavaScript only (the source HTML page just need to define two `<div>` tags as a point of attachment for the grid). The grid uses a RESTful web service  for CRUD operations (i.e. to obtain and update its data). As jqGrid is based on jQuery UI, its look can be customised with jQuery UI themes.
+jqGrid is an open source AJAX data grid which is based on jQuery and jQuery UI. It renders a grid using JavaScript (the source HTML page just need to define two `<div>` tags as a point of attachment for the grid). The grid uses a RESTful web service  for CRUD operations (i.e. to obtain and update its data). As jqGrid is based on jQuery UI, its look can be customised with jQuery UI themes.
 
 The configuration and customisation of jqGrid is one of the most interesting parts of this demo application as it's an example of Spring MVC/jqGrid integration. The customised grid has the following features:
 - It uses a RESTful web service with the following characteristics: RESTful URLs, four web methods (`GET`, `POST`, `PUT`, `DELETE`), JSON responses (the default configuration is different). The service consumes  `application/x-www-form-urlencoded` data. jqGrid can be customised to use a service that consumes JSON; however, JSON is harder to validate with Spring MVC as discussed in my StackOverflow question [here](http://stackoverflow.com/q/21793584/2842067).
@@ -43,7 +43,7 @@ The configuration and customisation of jqGrid is one of the most interesting par
 
 ####Templating framework
 
-Web pages consist of hierarchical templates (header, footer, menu, master-page, etc.). JSP tag files (`.tag`) are used for templating (as an alternative to third party frameworks such as Apache Tiles). See [this](http://stackoverflow.com/a/3257426/2842067) StackOverflow answer for details on using tag files for templating.
+Web pages consist of hierarchical blocks (header, footer, menu, master-page, etc.). JSP tag files (`.tag`) are used for templating (as an alternative to third party frameworks such as Apache Tiles). See [this](http://stackoverflow.com/a/3257426/2842067) StackOverflow answer for details on using the tag files for templating.
 
 ####Authentication and authorisation
 
@@ -51,7 +51,7 @@ Spring Security 3.2 framework is used to define user access to a web-page on per
 
 ####User input validation
 
-User input is validated server-side (with Spring MVC and JSR-303). I explained how validation errors are displayed in iqGrid in [this](http://stackoverflow.com/q/21808706/2842067) StackOverflow question.
+User input is validated server-side (with Spring MVC and JSR-303). I explained how validation errors are displayed in jqGrid in [this](http://stackoverflow.com/q/21808706/2842067) StackOverflow question.
 
 ####Error processing
 
