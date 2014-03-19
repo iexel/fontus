@@ -32,7 +32,7 @@ public class JspController {
 
 		model.addAttribute("selectedMainMenuItemCode", "main_menu_about");
 		model.addAttribute("selectedLeftMenuItemCode", "");
-		return "under-construction";
+		return "about";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)

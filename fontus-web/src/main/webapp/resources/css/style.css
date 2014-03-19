@@ -387,3 +387,79 @@ a {
 	top:5px;
 	margin-left:5px;
 }
+
+/* The About page (the project description copied from GitHub) ------------------------- */
+
+#b-about-page a {
+	color: #004165;
+}
+
+#b-about-page h3 {
+	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
+	font-size: 22.5px;
+	font-weight: 700;
+	line-height: 38.25px;
+	color: #333333;
+	margin-bottom: 15px;
+	margin-top: 22.5px;
+	margin-bottom: 15px;
+	font-style: normal;
+	border-bottom-color: #333333;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+#b-about-page h4 {
+	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 38.25px;
+	color: #333333;
+	margin-bottom: 15px;
+	margin-top: 18px;
+	margin-bottom: 15px;
+	font-style: normal;
+}
+
+#b-about-page p {
+	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	font-style: normal;
+	color: #333333;
+	line-height: 25.5px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#b-about-page code {
+	font-family: Consolas,​"Liberation Mono",​Courier,​monospace;
+	font-size: 12px;
+	font-weight: 400;
+	font-style: normal;
+	color: #333333;
+	line-height: 15.6px;
+	border-width: 1px;
+	border-color: #DDDDDD;
+	border-style: solid;
+	border-radius: 3px;
+	padding: 1px;
+}
+
+#b-about-page ul {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-left: 30px;
+}
+
+#b-about-page li {
+	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	font-style: normal;
+	color: #333333;
+	line-height: 25.5px;
+	list-style-type: disc;
+	line-height: 25.5px;
+}
+ 
