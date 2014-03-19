@@ -4,7 +4,7 @@
 
 ###Introduction
 
-This project is a template/demo of a CRUD web application. It uses Spring Web MVC (a Java web framework) and jqGrid (an open source JavaScript grid). The application features internationalisation, user authentication/authorisation, RESTful web services and a few more things that can be found in almost any web application. It's my study project. I have published it in a hope that it may be useful to someone as a boilerplate for a new application or as a demo application that showcases the use of Spring MVC and jqGrid.
+This project is a template/demo of a CRUD web application. It uses Spring Web MVC (a Java web framework) and jqGrid (an open source JavaScript grid). The application features internationalisation, user authentication/authorisation, RESTful web services and a few more things that can be found in almost any web application. It's my study project. I have published it [on GitHub](https://github.com/iexel/fontus) in a hope that it may be useful to someone as a boilerplate for a new application or as a demo application that showcases the use of Spring MVC and jqGrid.
 
 Why is it called Fontus? In the ancient Roman religion, Fontus was a god of wells and springs.
 
