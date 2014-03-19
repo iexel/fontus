@@ -18,6 +18,10 @@ The application consists of two child Maven projects included in a parent projec
 
 ###Technologies used in this application
 
+####Short list of technologies
+
+*Spring MVC, Java EE, RESTful Web Services, JSON, JSP, JSTL, HTML5, CSS3, jQuery, jQuery UI, JavaScript, AJAX, Tomcat, Maven**
+
 ####Server-side web development (Java EE & Spring MVC 4.0)
 
 The Spring MVC 4.0 framework is used in the application. Spring MVC is one of the most popular Java web frameworks (probably, _the_ most popular). JSP pages (with JSTL and EL) are used as the view technology.
