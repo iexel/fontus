@@ -20,7 +20,7 @@ The application consists of two child Maven projects included in a parent projec
 
 ####Short list of technologies
 
-*Spring MVC, Java EE, RESTful Web Services, JSON, JSP, JSTL, HTML5, CSS3, jQuery, jQuery UI, JavaScript, AJAX, Tomcat, Maven**
+**Spring MVC, Java EE, RESTful Web Services, JSON, JSP, JSTL, HTML5, CSS3, jQuery, jQuery UI, JavaScript, AJAX, Tomcat, Maven**
 
 ####Server-side web development (Java EE & Spring MVC 4.0)
 
