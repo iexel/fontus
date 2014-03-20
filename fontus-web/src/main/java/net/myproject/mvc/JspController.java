@@ -63,7 +63,7 @@ public class JspController {
 
 		model.addAttribute("selectedMainMenuItemCode", "main_menu_products_and_orders");
 		model.addAttribute("selectedLeftMenuItemCode", "left_menu_orders");
-		return "under-construction";
+		return "invoices";
 	}
 
 	@RequestMapping(value = "/admin-task-a", method = RequestMethod.GET)
@@ -71,7 +71,7 @@ public class JspController {
 
 		model.addAttribute("selectedMainMenuItemCode", "main_menu_administration");
 		model.addAttribute("selectedLeftMenuItemCode", "left_menu_administration_task_a");
-		return "under-construction";
+		return "administration";
 	}
 
 	@RequestMapping(value = "/admin-task-b", method = RequestMethod.GET)
@@ -79,6 +79,6 @@ public class JspController {
 
 		model.addAttribute("selectedMainMenuItemCode", "main_menu_administration");
 		model.addAttribute("selectedLeftMenuItemCode", "left_menu_administration_task_b");
-		return "under-construction";
+		return "administration";
 	}
 }
