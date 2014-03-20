@@ -11,11 +11,11 @@
 	<c:choose> 
 		<c:when test="${selectedMainMenuItemCode == 'main_menu_about'}">
 		</c:when>
-		<c:when test="${selectedMainMenuItemCode == 'main_menu_products_and_orders'}">
+		<c:when test="${selectedMainMenuItemCode == 'main_menu_products_and_invoices'}">
 			<ul>
 				<t:menu-item itemCode="left_menu_products" selectedItemCode="${selectedItemCode}" url="products"></t:menu-item>
 
-				<t:menu-item itemCode="left_menu_orders" selectedItemCode="${selectedItemCode}" url="orders"></t:menu-item>
+				<t:menu-item itemCode="left_menu_invoices" selectedItemCode="${selectedItemCode}" url="invoices"></t:menu-item>
 			</ul>
 		</c:when>
 		<c:when test="${selectedMainMenuItemCode == 'main_menu_administration'}">

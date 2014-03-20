@@ -8,7 +8,7 @@
 
 <div class="b-main-menu">
 	<ul class="menu">
-		<t:menu-item itemCode="main_menu_products_and_orders" selectedItemCode="${selectedItemCode}" url="products"></t:menu-item>
+		<t:menu-item itemCode="main_menu_products_and_invoices" selectedItemCode="${selectedItemCode}" url="products"></t:menu-item>
 		<sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
 			<t:menu-item itemCode="main_menu_administration" selectedItemCode="${selectedItemCode}" url="admin-task-a"></t:menu-item>
 		</sec:authorize>

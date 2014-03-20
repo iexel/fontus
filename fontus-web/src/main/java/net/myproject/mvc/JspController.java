@@ -53,16 +53,16 @@ public class JspController {
 	@RequestMapping(value = "/products", method = RequestMethod.GET)
 	public String products(Model model) {
 
-		model.addAttribute("selectedMainMenuItemCode", "main_menu_products_and_orders");
+		model.addAttribute("selectedMainMenuItemCode", "main_menu_products_and_invoices");
 		model.addAttribute("selectedLeftMenuItemCode", "left_menu_products");
 		return "products";
 	}
 
-	@RequestMapping(value = "/orders", method = RequestMethod.GET)
-	public String orders(Model model) {
+	@RequestMapping(value = "/invoices", method = RequestMethod.GET)
+	public String invoices(Model model) {
 
-		model.addAttribute("selectedMainMenuItemCode", "main_menu_products_and_orders");
-		model.addAttribute("selectedLeftMenuItemCode", "left_menu_orders");
+		model.addAttribute("selectedMainMenuItemCode", "main_menu_products_and_invoices");
+		model.addAttribute("selectedLeftMenuItemCode", "left_menu_invoices");
 		return "invoices";
 	}
 
