@@ -5,9 +5,7 @@
 <t:master-page selectedMainMenuItemCode="${selectedMainMenuItemCode}" selectedLeftMenuItemCode="${selectedLeftMenuItemCode}" locale="${springMvcLocale}">
 
 <div id=b-about-page>
-
-<p>This page has been left with no content intentionally. The <code>Administration</code> tab is an example of an UI feature that is available/visible to authenticated and authorized users only (i.e. users who belong to a specific group). See <a href="products">this</a> page for a demo of the CRUD functionality.</p>
-
+	<p><spring:message code="administration-page-content" arguments="products" /></p>
 </div>
 
 </t:master-page>

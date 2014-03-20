@@ -5,9 +5,7 @@
 <t:master-page selectedMainMenuItemCode="${selectedMainMenuItemCode}" selectedLeftMenuItemCode="${selectedLeftMenuItemCode}" locale="${springMvcLocale}">
 
 <div id=b-about-page>
-
-<p>This page has been left with no content intentionally. It demonstrates a possible structure of a web site. See <a href="products">this</a> page for a demo of the CRUD functionality.</p>
-
+	<p><spring:message code="invoices-page-content" arguments="products" /></p>
 </div>
 
 </t:master-page>
