@@ -16,7 +16,7 @@
 <h3>
 <a class="anchor" href="#online-deployment"><span class="octicon octicon-link"></span></a>Online deployment</h3>
 
-<p>You can check this web application online at <a href="http://demo.alexey.cloudbees.net">http://demo.alexey.cloudbees.net</a> (login: <code>admin</code>, password: <code>admin</code> for access to the protected pages). Usually, the first access to the URL is very slow as the server hibernates the application when it is not used. The free Java EE hosting at CloudBees provides very limited resources in other respect as well.</p>
+<p>You can check this web application online at <a href="http://demo.alexey.cloudbees.net">http://demo.alexey.cloudbees.net</a> (login: <code>admin</code>, password: <code>admin</code> for access to the protected pages). The free Java EE hosting at CloudBees provides limited resources, and the application can be slow at times.</p>
 
 <h3>
 <a class="anchor" href="#building-the-project"><span class="octicon octicon-link"></span></a>Building the project</h3>

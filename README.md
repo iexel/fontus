@@ -10,7 +10,7 @@ Why is it called Fontus? In the ancient Roman religion, Fontus was a god of well
 
 ###Online deployment
 
-You can check this web application online at http://demo.alexey.cloudbees.net (login: `admin`, password: `admin` for access to the protected pages). Usually, the first access to the URL is very slow as the server hibernates the application when it is not used. The free Java EE hosting at CloudBees provides very limited resources in other respect as well.
+You can check this web application online at http://demo.alexey.cloudbees.net (login: `admin`, password: `admin` for access to the protected pages). The free Java EE hosting at CloudBees provides limited resources, and the application can be slow at times.
 
 ###Building the project
 
