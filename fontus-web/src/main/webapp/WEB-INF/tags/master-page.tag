@@ -14,17 +14,21 @@
 
 <link rel="shortcut icon" href="resources/img/logo.ico" />
 
-<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui/redmond/jquery-ui-1.10.3.custom.min.css" />
-<link rel="stylesheet" type="text/css" href="resources/css/jqgrid/ui.jqgrid.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
 
-<script src="resources/js/libs/jquery/jquery-1.10.2.min.js"></script>
-<script src="resources/js/libs/jquery-ui/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="resources/js/common.js"></script>
 
+<!-- <script src="resources/js/libs/jquery/jquery-1.10.2.min.js"></script> -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui/redmond/jquery-ui-1.10.3.custom.min.css" /> -->
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/redmond/jquery-ui.css" />
+<!-- <script src="resources/js/libs/jquery-ui/jquery-ui-1.10.3.custom.min.js"></script> -->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="resources/css/jqgrid/ui.jqgrid.css" />
 <script src="resources/js/libs/jqgrid/i18n/grid.locale-${userLocale.language}.js"></script>
 <script src="resources/js/libs/jqgrid/jquery.jqGrid.min.js"></script>
-
-<script src="resources/js/common.js"></script>
 
 </head>
 <body>
