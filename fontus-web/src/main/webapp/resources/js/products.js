@@ -227,6 +227,8 @@ function decorateButtons()
 }
 
 function preloadImages() {
+	// Switch the comment if you use local (not CDN) jQuery UI.
+	//var themeImagesDir = "resources/css/jquery-ui/redmond/images/";
 	var themeImagesDir = "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/redmond/images/";
 
 	$('<img/>')[0].src = themeImagesDir + "ui-icons_217bc0_256x240.png";

@@ -109,12 +109,7 @@
 <h4>
 <a class="anchor" href="#import-to-eclipse"><span class="octicon octicon-link"></span></a>Import to Eclipse</h4>
 
-<p>After importing the three Maven projects to Eclipse, two additional steps should be taken:</p>
-
-<ul>
-<li>If code in JavaScript libraries does not validate, exclude the libraries from validation: <code>JavaScript</code> &gt; <code>Include Path</code> in project properties.</li>
-<li>In the properties of localisation files (<code>messages_ru.properties</code> and <code>messages.properties</code>) change their encoding to <code>UTF-8</code> (Spring MVC is configured to read these files in <code>UTF-8</code>).</li>
-</ul>
+<p>After importing the three Maven projects to Eclipse, change the encoding to <code>UTF-8</code> in the properties of localisation files (<code>messages_ru.properties</code> and <code>messages.properties</code>). Spring MVC is configured to read these files in <code>UTF-8</code>.<p>
 
 </div>
 

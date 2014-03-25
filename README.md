@@ -85,9 +85,7 @@ The application was tested in four major browsers: FireFox, Opera, Chrome and IE
 
 ####Import to Eclipse
 
-After importing the three Maven projects to Eclipse, two additional steps should be taken:
-- If code in JavaScript libraries does not validate, exclude the libraries from validation: `JavaScript` > `Include Path` in project properties.
-- In the properties of localisation files (`messages_ru.properties` and `messages.properties`) change their encoding to `UTF-8` (Spring MVC is configured to read these files in `UTF-8`).
+After importing the three Maven projects to Eclipse, change the encoding to `UTF-8` in the properties of localisation files (`messages_ru.properties` and `messages.properties`). Spring MVC is configured to read these files in `UTF-8`.
 
 ###Screenshot
 

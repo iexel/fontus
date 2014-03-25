@@ -15,20 +15,30 @@
 <link rel="shortcut icon" href="resources/img/logo.ico" />
 
 <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
-
 <script src="resources/js/common.js"></script>
 
-<!-- <script src="resources/js/libs/jquery/jquery-1.10.2.min.js"></script> -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-<!-- <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui/redmond/jquery-ui-1.10.3.custom.min.css" /> -->
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/redmond/jquery-ui.css" />
-<!-- <script src="resources/js/libs/jquery-ui/jquery-ui-1.10.3.custom.min.js"></script> -->
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jqgrid/4.5.4/css/ui.jqgrid.css" />
+<script src="//cdn.jsdelivr.net/jqgrid/4.5.4/i18n/grid.locale-${userLocale.language}.js"></script>
+<script src="//cdn.jsdelivr.net/jqgrid/4.5.4/jquery.jqGrid.min.js"></script>
+
+<!--
+Local (not CDN) libraries are not included in the distribution;
+download them and place in appropriate directories before removing the comment from this block:
+
+<script src="resources/js/libs/jquery/jquery-1.10.2.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui/redmond/jquery-ui-1.10.3.custom.min.css" />
+<script src="resources/js/libs/jquery-ui/jquery-ui-1.10.3.custom.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="resources/css/jqgrid/ui.jqgrid.css" />
 <script src="resources/js/libs/jqgrid/i18n/grid.locale-${userLocale.language}.js"></script>
 <script src="resources/js/libs/jqgrid/jquery.jqGrid.min.js"></script>
+-->
 
 </head>
 <body>
