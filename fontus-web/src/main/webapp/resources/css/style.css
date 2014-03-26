@@ -388,13 +388,13 @@ a {
 	margin-left:5px;
 }
 
-/* The About page (the project description copied from GitHub) ------------------------- */
+/* Text content -------------------------------------------------------------------- */
 
-#b-about-page a {
+.b-text-content a {
 	color: #004165;
 }
 
-#b-about-page h3 {
+.b-text-content h3 {
 	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
 	font-size: 22.5px;
 	font-weight: 700;
@@ -409,7 +409,7 @@ a {
 	border-bottom-style: solid;
 }
 
-#b-about-page h4 {
+.b-text-content h4 {
 	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
 	font-size: 18px;
 	font-weight: 700;
@@ -421,7 +421,7 @@ a {
 	font-style: normal;
 }
 
-#b-about-page p {
+.b-text-content p {
 	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
 	font-size: 15px;
 	font-weight: 400;
@@ -432,7 +432,7 @@ a {
 	margin-bottom: 15px;
 }
 
-#b-about-page code {
+.b-text-content code {
 	font-family: Consolas,​"Liberation Mono",​Courier,​monospace;
 	font-size: 12px;
 	font-weight: 400;
@@ -446,13 +446,13 @@ a {
 	padding: 1px;
 }
 
-#b-about-page ul {
+.b-text-content ul {
 	margin-top: 15px;
 	margin-bottom: 15px;
 	padding-left: 30px;
 }
 
-#b-about-page li {
+.b-text-content li {
 	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
 	font-size: 15px;
 	font-weight: 400;

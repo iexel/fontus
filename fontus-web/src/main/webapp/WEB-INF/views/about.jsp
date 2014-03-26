@@ -4,7 +4,7 @@
 
 <t:master-page selectedMainMenuItemCode="${selectedMainMenuItemCode}" selectedLeftMenuItemCode="${selectedLeftMenuItemCode}" locale="${springMvcLocale}">
 
-<div id=b-about-page>
+<div class=b-text-content>
 
 <h3>
 <a class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h3>

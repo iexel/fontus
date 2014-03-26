@@ -4,7 +4,7 @@
 
 <t:master-page selectedMainMenuItemCode="${selectedMainMenuItemCode}" selectedLeftMenuItemCode="${selectedLeftMenuItemCode}" locale="${springMvcLocale}">
 
-<div id=b-about-page>
+<div class=b-text-content>
 	<p><spring:message code="invoices-page-content" arguments="products" /></p>
 </div>
 
