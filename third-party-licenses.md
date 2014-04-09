@@ -1,15 +1,15 @@
 ###Third party libraries and images
 
-All third party libraries used in this project are both Free and Open Source software. Most third-party images are in the Public Domain.
+All third party libraries used in this project are both Free and Open Source software. Most of third-party images are in the Public Domain.
 
 This document lists the libraries and images used in the project, provides the text of their licenses and any notices that should be provided under the terms of these lisenses. The document also explains how the source code of the libraries can be obtained.
 
-Some libraries and images were released with more than one license by their copiright holders. This document lists all licenses available for a library/image; the license chosed by this project is marked with **bold font** or explicitly specified in text.
+Some libraries and images were released with more than one license by their copiright holders. This document lists all licenses available for a library/image; the license chosed by this project is marked with **bold font** or explicitly specified in the text.
 
 
 ###Source code
 
-The source code of most third-party Maven artifacts can be downloaded from the [Maven Central Repository](http://search.maven.org/). All Maven artifacts that have to be distributed with their source code (according to theit license requirements) have their source code available this way. To download the source code and/or JavaDoc:
+The source code of most third-party Maven artifacts can be downloaded from the [Maven Central Repository](http://search.maven.org/). All Maven artifacts that have to be distributed with their source code (according to their license requirements) have their source code available this way. To download the source code and/or JavaDoc:
 
  - Click `Advanced Search` on the front page of the [Maven Central Repository](http://search.maven.org/).
  - Enter `GroupId`, `ArtifactId` and `Version` of the Maven artifact and click `SEARCH`.
@@ -135,7 +135,7 @@ jquery.ui.effect-transfer.js
 
 ###Images
 
-The `img` directory that contains all images used in the project has a `source_images` subdirectory. `source_images` contains a copy of every image unchanged (as it was downloaded from its source). The file names of the source images are also preserved (however a suffix was added to some of them which indicated the image's resolution; e.g., `_48x48`). In this section, images are references by their original (unmodified) file names.
+The `img` directory that contains all images used in the project has a `source_images` subdirectory. `source_images` contains a copy of every image unchanged (as it was downloaded from its source). The file names of the source images are also preserved (however a suffix was added to some of them which indicated the image's resolution; e.g., `_48x48`). In this section, images are referenced by their original (unmodified) file names.
 
 **applications-development-3.png, emblem-important-2.png, emblem-important-2_48x48.png, applications-internet-3.png**<br>
 **Source:**  http://openiconlibrary.sourceforge.net/<br>
