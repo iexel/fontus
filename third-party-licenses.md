@@ -4,7 +4,7 @@ All third party libraries used in this project are both Free and Open Source sof
 
 This document lists the libraries and images used in the project, provides the text of their licenses and any notices that should be provided under the terms of these lisenses. The document also explains how the source code of the libraries can be obtained.
 
-Some libraries and images were released with more than one license by their copiright holders. This document lists all licenses available for a library/image; the license chosed by this project is marked with **bold font** or explicitly specified in the text.
+Some libraries and images were released with more than one license by their copiright holders. This document lists all licenses available for a library/image; the license chosen by this project is marked with **bold font** or explicitly specified in the text.
 
 
 ###Source code
