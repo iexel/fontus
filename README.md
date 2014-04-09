@@ -45,7 +45,7 @@ The configuration and customisation of jqGrid is one of the most interesting par
 
 ####Hierarchical templating
 
-Web pages consist of hierarchical blocks (header, footer, menu, master-page, etc.). JSP tag files (`.tag`) are used for templating (as an alternative to third party frameworks such as Apache Tiles). See [this](http://stackoverflow.com/a/3257426/2842067) StackOverflow answer for details on using the tag files for templating.
+The web pages consist of hierarchical blocks (header, footer, menu, master-page, etc.). JSP tag files (`.tag`) are used for templating (as an alternative to third party frameworks such as Apache Tiles). See [this](http://stackoverflow.com/a/3257426/2842067) StackOverflow answer for details on using the tag files for templating.
 
 ####Authentication and authorisation
 
