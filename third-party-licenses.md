@@ -18,7 +18,7 @@ The source code of most third-party Maven artifacts can be downloaded from the [
 
 ###CSS libraries
 
-**Eric Meyer's CSS Reset**<br>
+####Eric Meyer's CSS Reset
 **Project URL:**  http://meyerweb.com/eric/tools/css/reset/<br>
 **License names:**   (Public Domain)<br>
 **Source of the notice and license information:** the header of the CSS file<br>
@@ -26,7 +26,7 @@ The source code of most third-party Maven artifacts can be downloaded from the [
 
 ###JavaScript libraries
 
-**jQuery JavaScript Library v1.10.2**<br>
+####jQuery JavaScript Library v1.10.2
 **Project URL:**  http://jquery.com/<br>
 **License names:**  (MIT)<br>
 **Source of the notice and license information:**  the header of the JavaScript file<br>
@@ -59,7 +59,7 @@ http://sizzlejs.com/
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.        
 ```
 
-**jQuery UI - v1.10.3**<br>
+####jQuery UI - v1.10.3
 **Project URL:**  http://jqueryui.com<br>
 **License names:**  (MIT)<br>
 **Source of the notice and license information:**  the header of the JavaScript file<br>
@@ -104,7 +104,7 @@ jquery.ui.effect-transfer.js
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.        
 ```
 
-**jqGrid  4.5.4 - jQuery Grid**<br>
+####jqGrid  4.5.4 - jQuery Grid
 **Project URL:**  http://www.trirand.com<br>
 **License names:**  (**MIT**), (GPL v.2)<br>
 **Source of the notice and license information:**  the header of the JavaScript file<br>
@@ -137,19 +137,19 @@ jquery.ui.effect-transfer.js
 
 The `img` directory that contains all images used in the project has a `source_images` subdirectory. `source_images` contains a copy of every image unchanged (as it was downloaded from its source). The file names of the source images are also preserved (however a suffix was added to some of them which indicated the image's resolution; e.g., `_48x48`). In this section, images are referenced by their original (unmodified) file names.
 
-**applications-development-3.png, emblem-important-2.png, emblem-important-2_48x48.png, applications-internet-3.png**<br>
+####applications-development-3.png, emblem-important-2.png, emblem-important-2_48x48.png, applications-internet-3.png
 **Source:**  http://openiconlibrary.sourceforge.net/<br>
 **Author:**  tango<br>
 **License names:**  (Public Domain)<br>
 **Source of the notice and license information:**  the license information file distributed with the icon package <br>
 
-**flag-gb.png, flag-ru.png**<br>
+####flag-gb.png, flag-ru.png
 **Source:**  http://openiconlibrary.sourceforge.net/<br>
 **Author:**  wiki_commons_pd<br>
 **License names:**  (Public Domain)<br>
 **Source of the notice and license information:**  the license information file distributed with the icon package <br>
 
-**Appointment.svg**<br>
+####Appointment.svg
 **Source:**  http://commons.wikimedia.org/wiki/File:Appointment.svg<br>
 **Author:**  Inductiveload<br>
 **License names:**  (Public Domain)<br>
@@ -164,8 +164,7 @@ Some artifacts are downloaded and used at build time only (unit test frameworks,
 
 The project uses 34 Maven artifacts:
 
-<br>
-#####AOP alliance
+####AOP alliance
 **Maven artifact:**  groupId: aopalliance,  artifactId: aopalliance,  version: 1.0<br>
 **Project URL:**  http://aopalliance.sourceforge.net<br>
 **License names:**   (Public Domain)<br>
@@ -178,8 +177,7 @@ The project uses 34 Maven artifacts:
 ```
 ```
 
-<br>
-#####ClassMate
+####ClassMate
 **Maven artifact:**  groupId: com.fasterxml,  artifactId: classmate,  version: 1.0.0<br>
 **Project URL:**  http://github.com/cowtowncoder/java-classmate<br>
 **License names:**   (The Apache Software License, Version 2.0)<br>
@@ -192,8 +190,7 @@ The project uses 34 Maven artifacts:
 ```
 ```
 
-<br>
-#####Jackson-annotations
+####Jackson-annotations
 **Maven artifact:**  groupId: com.fasterxml.jackson.core,  artifactId: jackson-annotations,  version: 2.3.0<br>
 **Project URL:**  http://wiki.fasterxml.com/JacksonHome<br>
 **License names:**   (GNU Lesser General Public License, Version 2.1) (The Apache Software License, Version 2.0)<br>
@@ -207,8 +204,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####Jackson-core
+####Jackson-core
 **Maven artifact:**  groupId: com.fasterxml.jackson.core,  artifactId: jackson-core,  version: 2.3.0<br>
 **Project URL:**  http://wiki.fasterxml.com/JacksonHome<br>
 **License names:**   (GNU Lesser General Public License, Version 2.1) (The Apache Software License, Version 2.0)<br>
@@ -222,8 +218,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####jackson-databind
+####jackson-databind
 **Maven artifact:**  groupId: com.fasterxml.jackson.core,  artifactId: jackson-databind,  version: 2.3.0<br>
 **Project URL:**  http://wiki.fasterxml.com/JacksonHome<br>
 **License names:**   (GNU Lesser General Public License, Version 2.1) (The Apache Software License, Version 2.0)<br>
@@ -237,8 +232,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####Java Servlet API
+####Java Servlet API
 **Maven artifact:**  groupId: javax.servlet,  artifactId: javax.servlet-api,  version: 3.0.1<br>
 **Project URL:**  http://servlet-spec.java.net<br>
 **License names:**   (CDDL + GPLv2 with classpath exception)<br>
@@ -252,8 +246,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####JavaServer Pages(TM) API
+####JavaServer Pages(TM) API
 **Maven artifact:**  groupId: javax.servlet.jsp,  artifactId: javax.servlet.jsp-api,  version: 2.2.1<br>
 **Project URL:**  http://jsp.java.net<br>
 **License names:**   (CDDL + GPLv2 with classpath exception)<br>
@@ -267,8 +260,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####JavaServer Pages(TM) Standard Tag Library API
+####JavaServer Pages(TM) Standard Tag Library API
 **Maven artifact:**  groupId: javax.servlet.jsp.jstl,  artifactId: javax.servlet.jsp.jstl-api,  version: 1.2.1<br>
 **Project URL:**  http://jcp.org/en/jsr/detail?id=52<br>
 **License names:**   (CDDL + GPLv2 with classpath exception)<br>
@@ -282,8 +274,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####Bean Validation API
+####Bean Validation API
 **Maven artifact:**  groupId: javax.validation,  artifactId: validation-api,  version: 1.1.0.Final<br>
 **Project URL:**  http://beanvalidation.org<br>
 **License names:**   (The Apache Software License, Version 2.0)<br>
@@ -297,8 +288,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####JUnit
+####JUnit
 **Maven artifact:**  groupId: junit,  artifactId: junit,  version: 4.11<br>
 **Project URL:**  http://junit.org<br>
 **License names:**   (Common Public License Version 1.0)<br>
@@ -312,8 +302,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####Apache Log4j
+####Apache Log4j
 **Maven artifact:**  groupId: log4j,  artifactId: log4j,  version: 1.2.17<br>
 **Project URL:**  http://logging.apache.org/log4j/1.2/<br>
 **License names:**   (The Apache Software License, Version 2.0)<br>
@@ -327,8 +316,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####JavaServer Pages (TM) TagLib Implementation
+####JavaServer Pages (TM) TagLib Implementation
 **Maven artifact:**  groupId: org.glassfish.web,  artifactId: javax.servlet.jsp.jstl,  version: 1.2.2<br>
 **Project URL:**  http://jstl.java.net<br>
 **License names:**   (CDDL + GPLv2 with classpath exception)<br>
@@ -342,8 +330,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####Hamcrest All
+####Hamcrest All
 **Maven artifact:**  groupId: org.hamcrest,  artifactId: hamcrest-all,  version: 1.3<br>
 **Project URL:**  https://github.com/hamcrest/JavaHamcrest/hamcrest-all<br>
 **License names:**   (New BSD License)<br>
@@ -357,8 +344,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####Hamcrest Core
+####Hamcrest Core
 **Maven artifact:**  groupId: org.hamcrest,  artifactId: hamcrest-core,  version: 1.3<br>
 **Project URL:**  https://github.com/hamcrest/JavaHamcrest/hamcrest-core<br>
 **License names:**   (New BSD License)<br>
@@ -372,8 +358,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####Hibernate Validator Engine
+####Hibernate Validator Engine
 **Maven artifact:**  groupId: org.hibernate,  artifactId: hibernate-validator,  version: 5.0.2.Final<br>
 **Project URL:**  http://validator.hibernate.org/hibernate-validator<br>
 **License names:**   (Apache License, Version 2.0)<br>
@@ -387,8 +372,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####JBoss Logging 3
+####JBoss Logging 3
 **Maven artifact:**  groupId: org.jboss.logging,  artifactId: jboss-logging,  version: 3.1.1.GA<br>
 **Project URL:**  http://www.jboss.org<br>
 **License names:**   (GNU Lesser General Public License, version 2.1)<br>
@@ -402,8 +386,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####JCL 1.1.1 implemented over SLF4J
+####JCL 1.1.1 implemented over SLF4J
 **Maven artifact:**  groupId: org.slf4j,  artifactId: jcl-over-slf4j,  version: 1.7.5<br>
 **Project URL:**  http://www.slf4j.org<br>
 **License names:**   (MIT License)<br>
@@ -417,8 +400,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####SLF4J API Module
+####SLF4J API Module
 **Maven artifact:**  groupId: org.slf4j,  artifactId: slf4j-api,  version: 1.7.5<br>
 **Project URL:**  http://www.slf4j.org<br>
 **License names:**   (MIT License)<br>
@@ -432,8 +414,7 @@ The project uses 34 Maven artifacts:
 ```
 
 
-<br>
-#####SLF4J LOG4J-12 Binding
+####SLF4J LOG4J-12 Binding
 **Maven artifact:**  groupId: org.slf4j,  artifactId: slf4j-log4j12,  version: 1.7.5<br>
 **Project URL:**  http://www.slf4j.org<br>
 **License names:**   (MIT License)<br>
@@ -446,8 +427,7 @@ The project uses 34 Maven artifacts:
 ```
 ```
 
-<br>
-#####Spring
+####Spring
 **Spring AOP** (groupId: org.springframework,  artifactId: spring-aop,  version: 4.0.2.RELEASE),<br>
 **Spring Beans** (groupId: org.springframework,  artifactId: spring-beans,  version: 4.0.2.RELEASE),<br>
 **Spring Context** (groupId: org.springframework,  artifactId: spring-context,  version: 4.0.2.RELEASE),<br>
@@ -760,8 +740,7 @@ physical medium. This offer to obtain a copy of the Source Files is valid for
 three years from the date you acquired this Software product.
 ```
 
-<br>
-#####Spring Security
+####Spring Security
 **spring-security-acl** (groupId: org.springframework.security,  artifactId: spring-security-acl,  version: 3.2.1.RELEASE),<br>
 **spring-security-config** (groupId: org.springframework.security,  artifactId: spring-security-config,  version: 3.2.1.RELEASE),<br>
 **spring-security-core** (groupId: org.springframework.security,  artifactId: spring-security-core,  version: 3.2.1.RELEASE),<br>
@@ -799,8 +778,9 @@ See the generic Apache Software License, Version 2.0 in a separate section of
 this document.
 ```
 
-
+<br>
 ###Licenses
+
 
 ####Apache License / Apache Software License, Version 2.0
 ```
@@ -1007,6 +987,7 @@ this document.
    limitations under the License.
 ```
 
+<br>
 ####Common Development and Distribution License (CDDL), Version 1.0
 ```
       COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
@@ -1339,7 +1320,7 @@ courts of the State of California, with venue lying in Santa Clara County,
 California.
 ```
 
-
+<br>
 ####GNU General Public License, Version 3
 ```
                     GNU GENERAL PUBLIC LICENSE
@@ -2018,6 +1999,7 @@ Public License instead of this License.  But first, please read
 <http://www.gnu.org/philosophy/why-not-lgpl.html>.
 ```
 
+<br>
 ####GNU Lesser General Public license, Version 3
 ```
                    GNU LESSER GENERAL PUBLIC LICENSE
@@ -2187,6 +2169,7 @@ permanent authorization for you to choose that version for the
 Library.
 ```
 
+<br>
 ####Eclipse Public License, Version 1.0
 ```
 Eclipse Public License - v 1.0
@@ -2402,8 +2385,3 @@ Agreement will bring a legal action under this Agreement more than one year
 after the cause of action arose. Each party waives its rights to a jury trial
 in any resulting litigation.
 ```
-
-
-
-
-
