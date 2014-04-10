@@ -168,39 +168,37 @@ The project uses 34 Maven artifacts:
 **Maven artifact:**  groupId: aopalliance,  artifactId: aopalliance,  version: 1.0<br>
 **Project URL:**  http://aopalliance.sourceforge.net<br>
 **License names:**   (Public Domain)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
-**Notice:**
-```
-```
-**License:**
-```
-```
+**Source of the notice and license information:** http://aopalliance.sourceforge.net/<br>
+
 
 ####ClassMate
 **Maven artifact:**  groupId: com.fasterxml,  artifactId: classmate,  version: 1.0.0<br>
 **Project URL:**  http://github.com/cowtowncoder/java-classmate<br>
 **License names:**   (The Apache Software License, Version 2.0)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
+**Source of the notice and license information:** the Maven artifact<br>
 **Notice:**
 ```
+Java ClassMate library was originally written by Tatu Saloranta (tatu.saloranta@iki.fi)
+
+Other developers who have contributed code are:
+
+* Brian Langel
 ```
 **License:**
 ```
+See the Apache Software License, Version 2.0 in a separate section of
+this document.
 ```
 
 ####Jackson-annotations
 **Maven artifact:**  groupId: com.fasterxml.jackson.core,  artifactId: jackson-annotations,  version: 2.3.0<br>
 **Project URL:**  http://wiki.fasterxml.com/JacksonHome<br>
 **License names:**   (GNU Lesser General Public License, Version 2.1) (The Apache Software License, Version 2.0)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
-**Notice:**
-```
-```
+**Source of the notice and license information:** the Maven artifact<br>
 **License:**
 ```
+See the Apache Software License, Version 2.0 in a separate section of
+this document.
 ```
 
 
@@ -208,13 +206,34 @@ The project uses 34 Maven artifacts:
 **Maven artifact:**  groupId: com.fasterxml.jackson.core,  artifactId: jackson-core,  version: 2.3.0<br>
 **Project URL:**  http://wiki.fasterxml.com/JacksonHome<br>
 **License names:**   (GNU Lesser General Public License, Version 2.1) (The Apache Software License, Version 2.0)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
+**Source of the notice and license information:** the Maven artifact<br>
 **Notice:**
 ```
+# Jackson JSON processor
+
+Jackson is a high-performance, Free/Open Source JSON processing library.
+It was originally written by Tatu Saloranta (tatu.saloranta@iki.fi), and has
+been in development since 2007.
+It is currently developed by a community of developers, as well as supported
+commercially by FasterXML.com.
+
+## Licensing
+
+Jackson core and extension components may licensed under different licenses.
+To find the details that apply to this artifact see the accompanying LICENSE file.
+For more information, including possible other licensing options, contact
+FasterXML.com (http://fasterxml.com).
+
+## Credits
+
+A list of contributors may be found from CREDITS file, which is included
+in some artifacts (usually source distributions); but is always available
+from the source code management (SCM) system project uses.
 ```
 **License:**
 ```
+See the Apache Software License, Version 2.0 in a separate section of
+this document.
 ```
 
 
@@ -222,13 +241,34 @@ The project uses 34 Maven artifacts:
 **Maven artifact:**  groupId: com.fasterxml.jackson.core,  artifactId: jackson-databind,  version: 2.3.0<br>
 **Project URL:**  http://wiki.fasterxml.com/JacksonHome<br>
 **License names:**   (GNU Lesser General Public License, Version 2.1) (The Apache Software License, Version 2.0)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
+**Source of the notice and license information:**  the Maven artifact<br>
 **Notice:**
 ```
+# Jackson JSON processor
+
+Jackson is a high-performance, Free/Open Source JSON processing library.
+It was originally written by Tatu Saloranta (tatu.saloranta@iki.fi), and has
+been in development since 2007.
+It is currently developed by a community of developers, as well as supported
+commercially by FasterXML.com.
+
+## Licensing
+
+Jackson core and extension components may licensed under different licenses.
+To find the details that apply to this artifact see the accompanying LICENSE file.
+For more information, including possible other licensing options, contact
+FasterXML.com (http://fasterxml.com).
+
+## Credits
+
+A list of contributors may be found from CREDITS file, which is included
+in some artifacts (usually source distributions); but is always available
+from the source code management (SCM) system project uses.
 ```
 **License:**
 ```
+See the Apache Software License, Version 2.0 in a separate section of
+this document.
 ```
 
 
@@ -774,7 +814,7 @@ three years from the date you acquired this Software product.
 ```
 **License:**
 ```
-See the generic Apache Software License, Version 2.0 in a separate section of
+See the Apache Software License, Version 2.0 in a separate section of
 this document.
 ```
 
