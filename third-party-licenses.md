@@ -276,6 +276,7 @@ this document.
 **Java Servlet API** (groupId: javax.servlet,  artifactId: javax.servlet-api,  version: 3.0.1) - http://servlet-spec.java.net<br>
 **JavaServer Pages(TM) API** (groupId: javax.servlet.jsp,  artifactId: javax.servlet.jsp-api,  version: 2.2.1) - http://jsp.java.net<br>
 **JavaServer Pages(TM) Standard Tag Library API** (groupId: javax.servlet.jsp.jstl,  artifactId: javax.servlet.jsp.jstl-api,  version: 1.2.1) - http://jcp.org/en/jsr/detail?id=52<br>
+**JavaServer Pages (TM) TagLib Implementation** (groupId: org.glassfish.web,  artifactId: javax.servlet.jsp.jstl, version: 1.2.2) - http://jstl.java.net<br>
 
 **License names:**   (**CDDL** + GPLv2 with classpath exception)<br>
 **Source of the notice and license information:** the Maven artifacts, https://glassfish.java.net/nonav/public/CDDL+GPL.html<br>
@@ -617,27 +618,24 @@ with venue lying in Santa Clara County, California.
 **Maven artifact:**  groupId: javax.validation,  artifactId: validation-api,  version: 1.1.0.Final<br>
 **Project URL:**  http://beanvalidation.org<br>
 **License names:**   (The Apache Software License, Version 2.0)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
-**Notice:**
-```
-```
+**Source of the notice and license information:** https://github.com/beanvalidation/beanvalidation-api, http://beanvalidation.org/<br>
 **License:**
 ```
+See the Apache Software License, Version 2.0 in a separate section of
+this document.
 ```
 
 
 ####JUnit
 **Maven artifact:**  groupId: junit,  artifactId: junit,  version: 4.11<br>
 **Project URL:**  http://junit.org<br>
-**License names:**   (Common Public License Version 1.0)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
-**Notice:**
-```
-```
+**License names:**   (Eclipse Public License, Version 1.0)<br>
+**Source of the notice and license information:** https://github.com/junit-team/junit (The License Maven Plugin extracts the CPL license. The license was corrected manually.)<br>
+**Comments:** This Maven artifact is not distributed with the project; it is downloaded automatically by Maven at build time and is used at build time only for unit testing.<br>
 **License:**
 ```
+See the Eclipse Public License, Version 1.0 in a separate section of
+this document.
 ```
 
 
@@ -655,26 +653,12 @@ with venue lying in Santa Clara County, California.
 ```
 
 
-####JavaServer Pages (TM) TagLib Implementation
-**Maven artifact:**  groupId: org.glassfish.web,  artifactId: javax.servlet.jsp.jstl,  version: 1.2.2<br>
-**Project URL:**  http://jstl.java.net<br>
-**License names:**   (CDDL + GPLv2 with classpath exception)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
-**Notice:**
-```
-```
-**License:**
-```
-```
-
-
 ####Hamcrest All
 **Maven artifact:**  groupId: org.hamcrest,  artifactId: hamcrest-all,  version: 1.3<br>
 **Project URL:**  https://github.com/hamcrest/JavaHamcrest/hamcrest-all<br>
 **License names:**   (New BSD License)<br>
 **Source of the notice and license information:**<br>
-**Comments:**<br>
+**Comments:** This Maven artifact is not distributed with the project; it is downloaded automatically by Maven at build time and is used at build time only for unit testing.<br>
 **Notice:**
 ```
 ```
@@ -688,7 +672,7 @@ with venue lying in Santa Clara County, California.
 **Project URL:**  https://github.com/hamcrest/JavaHamcrest/hamcrest-core<br>
 **License names:**   (New BSD License)<br>
 **Source of the notice and license information:**<br>
-**Comments:**<br>
+**Comments:** This Maven artifact is not distributed with the project; it is downloaded automatically by Maven at build time and is used at build time only for unit testing.<br>
 **Notice:**
 ```
 ```
