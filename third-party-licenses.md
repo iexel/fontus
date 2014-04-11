@@ -631,7 +631,7 @@ this document.
 **Project URL:**  http://junit.org<br>
 **License names:**   (Eclipse Public License, Version 1.0)<br>
 **Source of the notice and license information:** https://github.com/junit-team/junit (The License Maven Plugin extracts the CPL license. The license was corrected manually.)<br>
-**Comments:** This Maven artifact is not distributed with the project; it is downloaded automatically by Maven at build time and is used at build time only for unit testing.<br>
+**Comments:** This Maven artifact is not distributed with the project; it is downloaded automatically by Maven at build time and is used at build time only (for unit testing).<br>
 **License:**
 ```
 See the Eclipse Public License, Version 1.0 in a separate section of
@@ -665,8 +665,8 @@ this document.
 **Hamcrest Core** (groupId: org.hamcrest,  artifactId: hamcrest-core,  version: 1.3) - https://github.com/hamcrest/JavaHamcrest/hamcrest-core<br>
 
 **License names:**   (New BSD License)<br>
-**Source of the notice and license information:** The Maven artifacts<br>
-**Comments:** These Maven artifacts are not distributed with the project; they are downloaded automatically by Maven at build time and are used at build time only, for unit testing.<br>
+**Source of the notice and license information:** the Maven artifacts<br>
+**Comments:** These Maven artifacts are not distributed with the project; they are downloaded automatically by Maven at build time and are used at build time only (for unit testing).<br>
 **License:**
 ```
 BSD License
@@ -714,9 +714,9 @@ this document.
 ####JBoss Logging 3
 **Maven artifact:**  groupId: org.jboss.logging,  artifactId: jboss-logging,  version: 3.1.1.GA<br>
 **Project URL:**  http://www.jboss.org<br>
-**License names:**   (GNU Lesser General Public License, version 2.1 or any later version); this project has chosen **version 3.0 of the license** <br>
+**License names:**   (GNU Lesser General Public License, Version 2.1 or any later version); this project has chosen **Version 3.0 of the license** <br>
 **Source of the notice and license information:** the pom.xml file at https://github.com/jboss-logging/jboss-logging<br>
-**Comments:** The Version 3.2.0.Beta2 of the library switched to the Apache license (see the pom.xml history on GitHub). <br>
+**Comments:** Version 3.2.0.Beta2 of the library switched to the Apache license (see the pom.xml history on GitHub). <br>
 **License:**
 ```
 See:
@@ -730,13 +730,13 @@ in separate sections of this document (LGPL v.3 is designed as an exception to G
 
 ####SLF4J
 
-**SLF4J API Module** (groupId: org.slf4j,  artifactId: slf4j-api,  version: 1.7.5)
+**SLF4J API Module** (groupId: org.slf4j,  artifactId: slf4j-api,  version: 1.7.5)<br>
 **SLF4J LOG4J-12 Binding** (groupId: org.slf4j,  artifactId: slf4j-log4j12,  version: 1.7.5)
 
 **Project URL:**  http://www.slf4j.org<br>
 **License names:**  (MIT License)<br>
 **Source of the notice and license information:** https://github.com/qos-ch/slf4j, http://www.slf4j.org<br>
-**Comments:** jcl-over-slf4j is listed separately<br>
+**Comments:** The jcl-over-slf4j artifact is described separately.<br>
 **License:**
 ```
 Copyright (c) 2004-2013 QOS.ch
