@@ -643,112 +643,137 @@ this document.
 **Maven artifact:**  groupId: log4j,  artifactId: log4j,  version: 1.2.17<br>
 **Project URL:**  http://logging.apache.org/log4j/1.2/<br>
 **License names:**   (The Apache Software License, Version 2.0)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
+**Source of the notice and license information:** the Maven artifact<br>
 **Notice:**
 ```
+Apache log4j
+Copyright 2007 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
 ```
 **License:**
 ```
+See the Apache Software License, Version 2.0 in a separate section of
+this document.
 ```
 
 
-####Hamcrest All
-**Maven artifact:**  groupId: org.hamcrest,  artifactId: hamcrest-all,  version: 1.3<br>
-**Project URL:**  https://github.com/hamcrest/JavaHamcrest/hamcrest-all<br>
+####Hamcrest
+
+**Hamcrest All** (groupId: org.hamcrest,  artifactId: hamcrest-all,  version: 1.3) - https://github.com/hamcrest/JavaHamcrest/hamcrest-all<br>
+**Hamcrest Core** (groupId: org.hamcrest,  artifactId: hamcrest-core,  version: 1.3) - https://github.com/hamcrest/JavaHamcrest/hamcrest-core<br>
+
 **License names:**   (New BSD License)<br>
-**Source of the notice and license information:**<br>
-**Comments:** This Maven artifact is not distributed with the project; it is downloaded automatically by Maven at build time and is used at build time only for unit testing.<br>
-**Notice:**
-```
-```
+**Source of the notice and license information:** The Maven artifacts<br>
+**Comments:** These Maven artifacts are not distributed with the project; they are downloaded automatically by Maven at build time and are used at build time only, for unit testing.<br>
 **License:**
 ```
-```
+BSD License
 
+Copyright (c) 2000-2006, www.hamcrest.org
+All rights reserved.
 
-####Hamcrest Core
-**Maven artifact:**  groupId: org.hamcrest,  artifactId: hamcrest-core,  version: 1.3<br>
-**Project URL:**  https://github.com/hamcrest/JavaHamcrest/hamcrest-core<br>
-**License names:**   (New BSD License)<br>
-**Source of the notice and license information:**<br>
-**Comments:** This Maven artifact is not distributed with the project; it is downloaded automatically by Maven at build time and is used at build time only for unit testing.<br>
-**Notice:**
-```
-```
-**License:**
-```
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this list of
+conditions and the following disclaimer. Redistributions in binary form must reproduce
+the above copyright notice, this list of conditions and the following disclaimer in
+the documentation and/or other materials provided with the distribution.
+
+Neither the name of Hamcrest nor the names of its contributors may be used to endorse
+or promote products derived from this software without specific prior written
+permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGE.
 ```
 
 
 ####Hibernate Validator Engine
 **Maven artifact:**  groupId: org.hibernate,  artifactId: hibernate-validator,  version: 5.0.2.Final<br>
 **Project URL:**  http://validator.hibernate.org/hibernate-validator<br>
-**License names:**   (Apache License, Version 2.0)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
-**Notice:**
-```
-```
+**License names:**  (Apache License, Version 2.0)<br>
+**Source of the notice and license information:**  https://github.com/hibernate/hibernate-validator<br>
 **License:**
 ```
+See the Apache Software License, Version 2.0 in a separate section of
+this document.
 ```
 
 
 ####JBoss Logging 3
 **Maven artifact:**  groupId: org.jboss.logging,  artifactId: jboss-logging,  version: 3.1.1.GA<br>
 **Project URL:**  http://www.jboss.org<br>
-**License names:**   (GNU Lesser General Public License, version 2.1)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
-**Notice:**
-```
-```
+**License names:**   (GNU Lesser General Public License, version 2.1 or any later version); this project has chosen **version 3.0 of the license** <br>
+**Source of the notice and license information:** the pom.xml file at https://github.com/jboss-logging/jboss-logging<br>
+**Comments:** The Version 3.2.0.Beta2 of the library switched to the Apache license (see the pom.xml history on GitHub). <br>
 **License:**
 ```
+See:
+
+GNU Lesser General Public license, Version 3 and
+GNU General Public License, Version 3
+
+in separate sections of this document (LGPL v.3 is designed as an exception to GPL v.3).
+```
+
+
+####SLF4J
+
+**SLF4J API Module** (groupId: org.slf4j,  artifactId: slf4j-api,  version: 1.7.5)
+**SLF4J LOG4J-12 Binding** (groupId: org.slf4j,  artifactId: slf4j-log4j12,  version: 1.7.5)
+
+**Project URL:**  http://www.slf4j.org<br>
+**License names:**  (MIT License)<br>
+**Source of the notice and license information:** https://github.com/qos-ch/slf4j, http://www.slf4j.org<br>
+**Comments:** jcl-over-slf4j is listed separately<br>
+**License:**
+```
+Copyright (c) 2004-2013 QOS.ch
+All rights reserved.
+
+Permission is hereby granted, free  of charge, to any person obtaining
+a  copy  of this  software  and  associated  documentation files  (the
+"Software"), to  deal in  the Software without  restriction, including
+without limitation  the rights to  use, copy, modify,  merge, publish,
+distribute,  sublicense, and/or sell  copies of  the Software,  and to
+permit persons to whom the Software  is furnished to do so, subject to
+the following conditions:
+
+The  above  copyright  notice  and  this permission  notice  shall  be
+included in all copies or substantial portions of the Software.
+
+THE  SOFTWARE IS  PROVIDED  "AS  IS", WITHOUT  WARRANTY  OF ANY  KIND,
+EXPRESS OR  IMPLIED, INCLUDING  BUT NOT LIMITED  TO THE  WARRANTIES OF
+MERCHANTABILITY,    FITNESS    FOR    A   PARTICULAR    PURPOSE    AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE,  ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
 
 ####JCL 1.1.1 implemented over SLF4J
 **Maven artifact:**  groupId: org.slf4j,  artifactId: jcl-over-slf4j,  version: 1.7.5<br>
 **Project URL:**  http://www.slf4j.org<br>
-**License names:**   (MIT License)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
-**Notice:**
-```
-```
+**License names:**  (Apache License, Version 2.0)<br>
+**Source of the notice and license information:** http://www.slf4j.org web site says SLF4J uses MIT licens. https://github.com/qos-ch/slf4j contains the same (MIT) license. However, jcl-over-slf4j subdirectory in the GitHub repository contains the Apache license. Probably, this component uses a different license.<br>
 **License:**
 ```
+See the Apache Software License, Version 2.0 in a separate section of
+this document.
 ```
 
-
-####SLF4J API Module
-**Maven artifact:**  groupId: org.slf4j,  artifactId: slf4j-api,  version: 1.7.5<br>
-**Project URL:**  http://www.slf4j.org<br>
-**License names:**   (MIT License)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
-**Notice:**
-```
-```
-**License:**
-```
-```
-
-
-####SLF4J LOG4J-12 Binding
-**Maven artifact:**  groupId: org.slf4j,  artifactId: slf4j-log4j12,  version: 1.7.5<br>
-**Project URL:**  http://www.slf4j.org<br>
-**License names:**   (MIT License)<br>
-**Source of the notice and license information:**<br>
-**Comments:**<br>
-**Notice:**
-```
-```
-**License:**
-```
-```
 
 ####Spring
 **Spring AOP** (groupId: org.springframework,  artifactId: spring-aop,  version: 4.0.2.RELEASE),<br>
