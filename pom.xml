@@ -124,8 +124,8 @@
 				<exclusions>
 					<exclusion>
 						<!--Excludes old versions of JSP, JSTL and Servlet APIs. -->
-						<groupId>*</groupId>
-						<artifactId>*</artifactId>
+						<groupId>javax.servlet.jsp.jstl</groupId>
+						<artifactId>jstl-api</artifactId>
 					</exclusion>
 				</exclusions>
 			</dependency>
