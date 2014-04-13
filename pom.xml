@@ -9,6 +9,14 @@
 	<version>0.0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Fontus Solution</name>
+	<url>https://github.com/iexel/fontus</url>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
