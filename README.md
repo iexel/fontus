@@ -1,6 +1,6 @@
 ##Fontus
 
-**_Spring MVC &amp; jqGrid: a CRUD application template/demo_**
+**_Spring MVC &amp; jqGrid: a CRUD application boilerplate_**
 
 ###Introduction
 
@@ -12,9 +12,13 @@ Why is it called Fontus? In the ancient Roman religion, Fontus was a god of well
 
 You can check this web application online at http://demo.alexey.cloudbees.net (login: `admin`, password: `admin` for access to the protected pages). The free Java EE hosting at CloudBees provides limited resources, and the application can be slow at times.
 
+###Licensing
+
+This project is released under the [Apache Software License, Version 2.0](https://github.com/iexel/fontus/blob/master/LICENSE). All third party libraries used in the project are both Free and Open Source software. Most of third-party images are in the Public Domain. A document that lists all third party components of the application and addresses their license requirements is included in both the source code distribution ([here](https://github.com/iexel/fontus/blob/master/third-party-licenses.md)), and into the deployed application ([here](http://demo.alexey.cloudbees.net/credit)). The License Maven Plugin with a [custom FreeMaker template](https://github.com/iexel/fontus/blob/master/license-maven-plugin-template.ftl) is used for building the list third-party artifacts and their licenses.
+
 ###Building the project
 
-The application consists of two child Maven projects included in a parent project. Issue `mvn clean package` from the parent project directory to build the application.
+The application is a multi-module Maven project consisting of a parent and two child projects. Use `mvn clean package` to build it.
 
 ###Technologies used in this application
 
@@ -24,7 +28,7 @@ Spring MVC, Java EE, RESTful Web Services, JSON, JSP, JSTL, HTML5, CSS3, jQuery,
 
 ####Server-side web development (Java EE & Spring MVC 4.0)
 
-The Spring MVC 4.0 framework is used in the application. Spring MVC is one of the most popular Java web frameworks (probably, _the_ most popular). JSP pages (with JSTL and EL) are used as the view technology.
+The Spring MVC 4.0 framework is used in the application. Spring MVC is one of the most popular Java web frameworks (probably, the most popular). JSP pages (with JSTL and EL) are used as the view technology.
 
 ####RESTful web services
 
@@ -45,11 +49,15 @@ The configuration and customisation of jqGrid is one of the most interesting par
 
 ####Hierarchical templating
 
-The web pages consist of hierarchical blocks (header, footer, menu, master-page, etc.). JSP tag files (`.tag`) are used for templating (as an alternative to third party frameworks such as Apache Tiles). See [this](http://stackoverflow.com/a/3257426/2842067) StackOverflow answer for details on using the tag files for templating.
+The web pages consist of hierarchical blocks (header, footer, menu, master-page, etc.). JSP `.tag` files are used for templating (as an alternative to third party frameworks such as Apache Tiles). See [this](http://stackoverflow.com/a/3257426/2842067) StackOverflow answer for details on using `.tag` files for templating.
 
 ####Authentication and authorisation
 
 Spring Security 3.2 framework is used to define user access to a web-page on per-role basis. Some pages change their appearance depending on the user's permissions.
+
+####Internationalisation and localisation
+
+The application is internationalised (with Spring MVC) and localised for two languages.
 
 ####User input validation
 
