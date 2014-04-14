@@ -449,7 +449,7 @@ a {
 }
 
 .b-text-content code {
-	font-family: Consolas,​"Liberation Mono",​Courier,​monospace;
+	font-family: "Liberation Mono",​Courier,​monospace;
 	font-size: 12px;
 	font-weight: 400;
 	font-style: normal;
