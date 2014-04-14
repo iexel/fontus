@@ -97,4 +97,4 @@ After importing the three Maven projects to Eclipse, change the encoding to `UTF
 
 ###Screenshot
 
-![alt text](screenshot.jpeg "Screenshot")
+![alt text](screenshot.png "Screenshot")
