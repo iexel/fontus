@@ -462,6 +462,26 @@ a {
 	padding: 1px;
 }
 
+.b-text-content pre {
+	font-family: "Liberation Mono",​Courier,​monospace;
+	font-size: 12px;
+	font-weight: 400;
+	font-style: normal;
+	color: #333333;
+	line-height: 15.6px;
+	background-color: White;
+
+	border-width: 1px;
+	border-color: #DDDDDD;
+	border-style: solid;
+	border-radius: 3px;
+	padding: 1px;
+}
+
+.b-text-content pre code {
+	border: none;
+}
+
 .b-text-content ul {
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -478,4 +498,7 @@ a {
 	list-style-type: disc;
 	line-height: 25.5px;
 }
- 
+
+.b-text-content strong {
+	font-weight: 700;
+}

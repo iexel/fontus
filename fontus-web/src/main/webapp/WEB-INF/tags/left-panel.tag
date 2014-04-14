@@ -27,6 +27,11 @@ limitations under the License.
 <div class="b-left-panel">
 	<c:choose> 
 		<c:when test="${selectedMainMenuItemCode == 'main_menu_about'}">
+			<ul>
+				<t:menu-item itemCode="left_menu_about" selectedItemCode="${selectedItemCode}" url="about"></t:menu-item>
+
+				<t:menu-item itemCode="left_menu_credits" selectedItemCode="${selectedItemCode}" url="credits"></t:menu-item>
+			</ul>
 		</c:when>
 		<c:when test="${selectedMainMenuItemCode == 'main_menu_products_and_invoices'}">
 			<ul>

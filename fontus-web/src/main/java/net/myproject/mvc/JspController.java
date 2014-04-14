@@ -47,8 +47,16 @@ public class JspController {
 		logger.info("The /about/ page controller method.");
 
 		model.addAttribute("selectedMainMenuItemCode", "main_menu_about");
-		model.addAttribute("selectedLeftMenuItemCode", "");
+		model.addAttribute("selectedLeftMenuItemCode", "left_menu_about");
 		return "about";
+	}
+
+	@RequestMapping(value = "/credits", method = RequestMethod.GET)
+	public String credits(Model model) {
+
+		model.addAttribute("selectedMainMenuItemCode", "main_menu_about");
+		model.addAttribute("selectedLeftMenuItemCode", "left_menu_credits");
+		return "credits";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)

@@ -33,6 +33,7 @@ limitations under the License.
 
 		<intercept-url pattern="/" access="isAnonymous() or hasRole('ROLE_USER')" />
 		<intercept-url pattern="/about/**" access="isAnonymous() or hasRole('ROLE_USER')" />
+		<intercept-url pattern="/credits/**" access="isAnonymous() or hasRole('ROLE_USER')" />
 		<intercept-url pattern="/login/**" access="isAnonymous() or hasRole('ROLE_USER')" />
 		<intercept-url pattern="/error/**" access="isAnonymous() or hasRole('ROLE_USER')" />
 		<intercept-url pattern="/resources/**" access="isAnonymous() or hasRole('ROLE_USER')" />

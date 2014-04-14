@@ -36,9 +36,14 @@ limitations under the License.
 <p>You can check this web application online at <a href="http://demo.alexey.cloudbees.net">http://demo.alexey.cloudbees.net</a> (login: <code>admin</code>, password: <code>admin</code> for access to the protected pages). The free Java EE hosting at CloudBees provides limited resources, and the application can be slow at times.</p>
 
 <h3>
+<a class="anchor" href="#licensing"><span class="octicon octicon-link"></span></a>Licensing</h3>
+
+<p>This project is released under the <a href="https://github.com/iexel/fontus/blob/master/LICENSE">Apache Software License, Version 2.0</a>. All third party libraries used in the project are both Free and Open Source software. Most of third-party images are in the Public Domain. A document that lists all third party components of the application and addresses their license requirements is included in both the source code distribution (<a href="https://github.com/iexel/fontus/blob/master/third-party-licenses.md">here</a>), and into the deployed application (<a href="http://demo.alexey.cloudbees.net/credit">here</a>). The list third-party artifacts and their licenses is build semi-automatically with a help of the License Maven Plugin and a <a href="https://github.com/iexel/fontus/blob/master/license-maven-plugin-template.ftl">custom FreeMaker template</a>.</p>
+
+<h3>
 <a class="anchor" href="#building-the-project"><span class="octicon octicon-link"></span></a>Building the project</h3>
 
-<p>The application consists of two child Maven projects included in a parent project. Issue <code>mvn clean package</code> from the parent project directory to build the application.</p>
+<p>The application is a multi-module Maven project consisting of a parent and two child projects. Use <code>mvn clean package</code> to build it.</p>
 
 <h3>
 <a class="anchor" href="#technologies-used-in-this-application"><span class="octicon octicon-link"></span></a>Technologies used in this application</h3>
@@ -51,7 +56,7 @@ limitations under the License.
 <h4>
 <a class="anchor" href="#server-side-web-development-java-ee--spring-mvc-40"><span class="octicon octicon-link"></span></a>Server-side web development (Java EE &amp; Spring MVC 4.0)</h4>
 
-<p>The Spring MVC 4.0 framework is used in the application. Spring MVC is one of the most popular Java web frameworks (probably, <em>the</em> most popular). JSP pages (with JSTL and EL) are used as the view technology.</p>
+<p>The Spring MVC 4.0 framework is used in the application. Spring MVC is one of the most popular Java web frameworks (probably, the most popular). JSP pages (with JSTL and EL) are used as the view technology.</p>
 
 <h4>
 <a class="anchor" href="#restful-web-services"><span class="octicon octicon-link"></span></a>RESTful web services</h4>
@@ -75,14 +80,19 @@ limitations under the License.
 <li>It is tuned (with CSS and JavaScript) to have an acceptable look in all major browsers.</li>
 <li>Some other things...</li>
 </ul><h4>
-<a class="anchor" href="#templating-framework"><span class="octicon octicon-link"></span></a>Templating framework</h4>
+<a class="anchor" href="#hierarchical-templating"><span class="octicon octicon-link"></span></a>Hierarchical templating</h4>
 
-<p>Web pages consist of hierarchical blocks (header, footer, menu, master-page, etc.). JSP tag files (<code>.tag</code>) are used for templating (as an alternative to third party frameworks such as Apache Tiles). See <a href="http://stackoverflow.com/a/3257426/2842067">this</a> StackOverflow answer for details on using the tag files for templating.</p>
+<p>The web pages consist of hierarchical blocks (header, footer, menu, master-page, etc.). JSP <code>.tag</code> files are used for templating (as an alternative to third party frameworks such as Apache Tiles). See <a href="http://stackoverflow.com/a/3257426/2842067">this</a> StackOverflow answer for details on using <code>.tag</code> files for templating.</p>
 
 <h4>
 <a class="anchor" href="#authentication-and-authorisation"><span class="octicon octicon-link"></span></a>Authentication and authorisation</h4>
 
 <p>Spring Security 3.2 framework is used to define user access to a web-page on per-role basis. Some pages change their appearance depending on the user's permissions.</p>
+
+<h4>
+<a class="anchor" href="#internationalisation-and-localisation"><span class="octicon octicon-link"></span></a>Internationalisation and localisation</h4>
+
+<p>The application has been internationalised (the capabilities of Spring MVC are used for internationalisation) and localised for two languages.</p>
 
 <h4>
 <a class="anchor" href="#user-input-validation"><span class="octicon octicon-link"></span></a>User input validation</h4>
@@ -126,7 +136,7 @@ limitations under the License.
 <h4>
 <a class="anchor" href="#import-to-eclipse"><span class="octicon octicon-link"></span></a>Import to Eclipse</h4>
 
-<p>After importing the three Maven projects to Eclipse, change the encoding to <code>UTF-8</code> in the properties of localisation files (<code>messages_ru.properties</code> and <code>messages.properties</code>). Spring MVC is configured to read these files in <code>UTF-8</code>.<p>
+<p>After importing the three Maven projects to Eclipse, change the encoding to <code>UTF-8</code> in the properties of localisation files (<code>messages_ru.properties</code> and <code>messages.properties</code>). Spring MVC is configured to read these files in <code>UTF-8</code>.</p>
 
 </div>
 
