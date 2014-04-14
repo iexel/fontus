@@ -14,7 +14,7 @@ You can check this web application online at http://demo.alexey.cloudbees.net (l
 
 ###Licensing
 
-This project is released under the [Apache Software License, Version 2.0](https://github.com/iexel/fontus/blob/master/LICENSE). All third party libraries used in the project are both Free and Open Source software. Most of third-party images are in the Public Domain. A document that lists all third party components of the application and addresses their license requirements is included in both the source code distribution ([here](https://github.com/iexel/fontus/blob/master/third-party-licenses.md)), and into the deployed application ([here](http://demo.alexey.cloudbees.net/credit)). The License Maven Plugin with a [custom FreeMaker template](https://github.com/iexel/fontus/blob/master/license-maven-plugin-template.ftl) is used for building the list third-party artifacts and their licenses.
+This project is released under the [Apache Software License, Version 2.0](https://github.com/iexel/fontus/blob/master/LICENSE). All third party libraries used in the project are both Free and Open Source software. Most of third-party images are in the Public Domain. A document that lists all third party components of the application and addresses their license requirements is included in both the source code distribution ([here](https://github.com/iexel/fontus/blob/master/third-party-licenses.md)), and into the deployed application ([here](http://demo.alexey.cloudbees.net/credit)). The list third-party artifacts and their licenses is build semi-automatically with a help of the License Maven Plugin and a [custom FreeMaker template](https://github.com/iexel/fontus/blob/master/license-maven-plugin-template.ftl).
 
 ###Building the project
 
@@ -57,7 +57,7 @@ Spring Security 3.2 framework is used to define user access to a web-page on per
 
 ####Internationalisation and localisation
 
-The application is internationalised (with Spring MVC) and localised for two languages.
+The application has been internationalised (the capabilities of Spring MVC are used for internationalisation) and localised for two languages.
 
 ####User input validation
 
