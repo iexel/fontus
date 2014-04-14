@@ -8,6 +8,8 @@ Some libraries and images were released with more than one license by their copy
 
 Most Java libraries are not distributed with the source code version of this project. They are downloaded by Maven at build time. However, they are a part of the distribution when a binary version of this project (a `.war` file) is distributed. Some libraries used for unit testing are never distributed with any version of this project. They are downloaded by Maven and used at build time only. These libraries have an appropriate comment in their description. 
 
+In this document, some third-party libraries and images have their license texts provided directly below their description. Others refer to licenses provided in a separate section of this document. Usually, if a library/image has its license text provided directly below its description (specifically for this library/image), the license has some modifications that are specific to this  library/image (e.g. a copyright notice, additional terms, or additional licenses for its subcomponents).
+
 ###Source code
 
 The source code of most third-party Maven artifacts can be downloaded from the [Maven Central Repository](http://search.maven.org/). All Maven artifacts that have to be distributed with their source code (according to their license requirements) have their source code available this way. To download the source code and/or JavaDoc: 
