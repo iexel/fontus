@@ -64,6 +64,7 @@ function setupGrid() {
 		caption:gridCaption, // defined in the JSP file for localization purposes
 		loadError:loadErrorCallback, // error handler; add/edit/delete errors are processed by other methods
 		autoencode:true //when set to true encodes (HTML encode) the incoming (from server) and posted data. It prevents Cross-site scripting (XSS) attacks.
+		//The posted data should not be encoded - it's de-encoded in serializeEditDataCallback().
 	});
 
 	// The add/edit/delete/search buttons in the navigation bar are initialized here, but are not used.
@@ -101,6 +102,10 @@ function serializeEditDataCallback(data) {
 	// the operation is passed as an HTTP method, this field is not necessary
 	delete modifiedData.oper;
 
+	//The "autoencode:true" option HTML-encodes incoming and posted data.
+	//The posted data should not be encoded. It is de-encoded here.
+	modifiedData.name = $.jgrid.htmlDecode(modifiedData.name);
+	
 	// encode the data in `application/x-www-form-urlencoded`
 	return $.param(modifiedData);
 
