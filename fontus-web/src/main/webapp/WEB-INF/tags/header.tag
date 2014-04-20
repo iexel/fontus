@@ -18,6 +18,7 @@ limitations under the License.
 <%@tag description="Page header" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@attribute name="userName" required="true" type="java.lang.String"%>
 
@@ -33,7 +34,7 @@ limitations under the License.
 			<li><a href="login"><spring:message code="header_menu_login" /></a></li>
 		</sec:authorize>
 		<sec:authorize access="not isAnonymous()">
-			<li><a href="logout"><spring:message code="header_menu_logout" />: ${userName}</a></li>
+			<li><a href="logout"><spring:message code="header_menu_logout" />: <c:out value="${userName}" /></a></li>
 		</sec:authorize>
 
 		<li><a href="error/under-construction"><spring:message code="header_menu_help" /></a></li>
