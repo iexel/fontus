@@ -62,7 +62,8 @@ function setupGrid() {
 		pager:"#pagingDiv",
 		viewrecords:true,
 		caption:gridCaption, // defined in the JSP file for localization purposes
-		loadError:loadErrorCallback // error handler; add/edit/delete errors are processed by other methods
+		loadError:loadErrorCallback, // error handler; add/edit/delete errors are processed by other methods
+		autoencode:true //when set to true encodes (HTML encode) the incoming (from server) and posted data. It prevents Cross-site scripting (XSS) attacks.
 	});
 
 	// The add/edit/delete/search buttons in the navigation bar are initialized here, but are not used.
