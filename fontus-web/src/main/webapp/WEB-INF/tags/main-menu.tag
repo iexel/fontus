@@ -24,6 +24,50 @@ limitations under the License.
 <%@attribute name="selectedItemCode" required="true" type="java.lang.String"%>
 
 <div class="b-main-menu">
+
+	<div id="mobile-menu-button">
+		<a href="#mobile-menu"><img src="resources/img/three-bar.png"></img></a>
+	</div>
+	<div class="page-title">
+		<div><spring:message code="${selectedLeftMenuItemCode}" /></div>
+	</div>
+
+	<div style="display:none;">
+		<nav id="mobile-menu">
+			<ul>
+				<li>
+					<span><spring:message code="main_menu_products_and_invoices" /></span>
+					<ul>
+						<li><a href="products"><spring:message code="left_menu_products" /></a></li>
+						<li><a href="invoices"><spring:message code="left_menu_invoices" /></a></li>
+					</ul>
+				</li>
+				<li>
+					<span><spring:message code="main_menu_administration" /></span>
+					<ul>
+						<li><a href="admin-task-a"><spring:message code="left_menu_administration_task_a" /></a></li>
+						<li><a href="admin-task-b"><spring:message code="left_menu_administration_task_b" /></a></li>
+					</ul>
+				</li>
+				<li>
+					<span><spring:message code="main_menu_about" /></span>
+					<ul>
+						<li><a href="about"><spring:message code="left_menu_about" /></a></li>
+						<li><a href="credits"><spring:message code="left_menu_credits" /></a></li>
+					</ul>
+				</li>
+				<li>
+					<span><spring:message code="main_menu_help" /></span>
+					<ul>
+						<li><a href="error/under-construction"><spring:message code="header_menu_help" /></a></li>
+						<li><a href="error/under-construction"><spring:message code="header_menu_contacts" /></a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+
 	<ul class="menu">
 		<t:menu-item itemCode="main_menu_products_and_invoices" selectedItemCode="${selectedItemCode}" url="products"></t:menu-item>
 		<sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">

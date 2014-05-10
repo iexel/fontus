@@ -17,4 +17,6 @@ limitations under the License.
 --%>
 <%@tag description="Page main menu" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
-<div class="b-right-panel"></div>
+<div class="b-right-panel">
+	<div class="place-holder"></div>
+</div>

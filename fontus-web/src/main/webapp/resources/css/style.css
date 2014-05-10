@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-@import url('reset.css');
 
 /* My additions to the reset ---------------------------------------------- */
 
 body {
 	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 a:active {
@@ -31,20 +31,16 @@ a {
 }
 
 /* Page containers -------------------------------------------------------- */
-.b-page-container {
-	width: 100%;
-}
 
 .b-page-container .internal-container {
 	/* width: 900px; */
-	width: 100%;
 	margin: 0px auto;
 }
 
 /* Header ----------------------------------------------------------------- */
+
 .b-header {
 	position: relative;
-	width: 100%;
 	height: 100px;
 	background-color: #007dba;
 }
@@ -57,7 +53,9 @@ a {
 
 .b-header .logo1 a {
 	color: White;
-	font: italic bold 20px Arial;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 20px;
 	text-decoration: none;
 	outline: none;
 }
@@ -70,7 +68,8 @@ a {
 
 .b-header .logo2 a {
 	color: White;
-	font: italic 11px Arial;
+	font-style: italic;
+	font-size: 11px;
 	text-decoration: none;
 	outline: none;
 }
@@ -98,7 +97,6 @@ a {
 .b-header li a {
 	color: White;
 	text-decoration: none;
-	font-family: Verdana;
 	border-width: 0;
 	text-align: left;
 	outline: none;
@@ -109,9 +107,9 @@ a {
 }
 
 /* Main menu ---------------------------------------------------------- */
+
 .b-main-menu {
 	position: relative;
-	width: 100%;
 	height: 30px;
 	background-color: White;
 	height: 43px;
@@ -136,7 +134,7 @@ a {
 	border-top-right-radius: 10px;
 	border-bottom: 0;
 	border-right: 0;
-	padding-top: 5px;
+	padding-top: 7px;
 	background: url("../img/menu-background.png") repeat scroll 0 0 transparent;
 }
 
@@ -144,7 +142,7 @@ a {
 	color: #004165;
 	padding: 0px 20px 0px;
 	text-decoration: none;
-	font: 15px Helvetica;
+	font-size: 15px;
 	outline: none;
 }
 
@@ -176,7 +174,40 @@ a {
 	outline: none;
 }
 
+.b-main-menu #mobile-menu-button {
+	display: none;
+	border-right: 1px solid Silver;
+	width: 31px;
+	height: 43px;
+	padding-left: 15px;
+	padding-top: 15px;
+}
+
+.b-main-menu #mobile-menu-button a{
+	outline: none;
+	text-decoration: none;
+}
+
+.b-main-menu .page-title {
+	font-size: 15px;
+	display: none;
+	width: 120px;
+	height: 43px;
+	padding-left: 10px;
+	position: absolute;
+	top: 0px;
+	left: 50px;
+	display: none; /*set to "table" to display the title (for vertical-alignment)*/
+}
+
+.b-main-menu .page-title div{
+	height: 43px;
+	display:table-cell; /*for vertical-alignment*/
+	vertical-align: middle;
+}
+
 /* Left, center and right panels ------------------------------------------------ */
+
 .b-panels {
 	position: relative;
 	width: 100%;
@@ -202,14 +233,14 @@ a {
 
 .b-left-panel ul li {
 	border-bottom: 1px solid Silver;
-	padding: 2px;
+	padding: 4px;
 	background: url("../img/menu-background.png") repeat scroll 0 0
 		transparent;
 }
 
 .b-left-panel ul li a {
 	color: #004165;
-	font: 14px Helvetica;
+	font-size: 14px;
 	text-decoration: none;
 	outline: none;
 }
@@ -223,6 +254,12 @@ a {
 	background-color: #B8DBEB;
 }
 
+.b-left-panel .selected a {
+	color: black;
+	font-style: italic;
+	font-size: 15px;
+}
+
 .b-left-panel .place-holder {
 	height: 420px;
 	width: 190px;
@@ -233,21 +270,18 @@ a {
 	display: table-cell;
 	width: auto;
 	background-color: AliceBlue;
-	font: italic 14px Arial;
 	border: none;
 	vertical-align: top;
-	padding: 20px;
-	padding-bottom: 100px;
 }
 
 * html .b-center-panel {
 	float: left;
 }
 
-.b-center-panel .container {
+.b-center-panel .content {
 	position: relative;
-	width: 100%;
-	height: 100%;
+	padding: 20px;
+	padding-bottom: 100px;
 }
 
 .b-center-panel .dataGrid {
@@ -262,17 +296,13 @@ a {
 .b-center-panel .grid-col {
 	padding-right: 5px !important;
 	padding-left: 5px !important;
+	vertical-align: middle;
 }
 
 .b-center-panel .ui-jqgrid-bdiv {
 	scrollbar-arrow-color: black;
 	scrollbar-base-color: white;
 	scrollbar-face-color: white;
-/*	scrollbar-3dlight-color: ;
-	scrollbar-darkshadow-color: ;
-	scrollbar-highlight-color: ;
-	scrollbar-shadow-color: ;
-*/
 }
 
 .b-center-panel .ui-pg-input {
@@ -291,16 +321,26 @@ a {
 	margin-left: 30px; 
 }
 
+.b-center-panel .place-holder {
+	height: 200px;
+	width: 0px;
+}
+
 .b-right-panel {
 	position: relative;
 	display: table-cell;
 	width: 140px;
 	vertical-align: top;
 	background-color: #007dba;
-	/* background: linear-gradient(to right, #007dba, #5CB8E6); */
+}
+
+.b-right-panel .place-holder {
+	height: 420px;
+	width: 140px;
 }
 
 /* Footer --------------------------------------------------------------- */
+
 .b-footer {
 	height: 60px;
 	position: relative;
@@ -330,7 +370,7 @@ a {
 .b-footer li a {
 	color: #004165;
 	text-decoration: none;
-	font-family: Verdana;
+	font-size: 11px;
 	border-width: 0;
 	text-align: left;
 	outline: none;
@@ -348,7 +388,7 @@ a {
 	text-align: center;
 	margin-top: 15%;
 	color: Black;
-	font: 14px Helvetica;
+	font-size: 14px;
 }
 
 .b-error-page a {
@@ -370,10 +410,10 @@ a {
 	position: absolute;
 	height: 200px;
 	width: 400px;
-	margin: -100px 0 0 -200px;
+	margin: -100px 0 0 -165px;
 	top: 50%;
 	left: 50%;
-	font: 14px Helvetica;
+	font-size: 14px;
 }
 
 .b-login-page .error-message {
@@ -394,9 +434,60 @@ a {
 	font-weight: bold;
 }
 
+/* Adjusting a page for small and high resolutions---------------------------------- */
+
+@media (max-width: 800px) {
+
+	.b-header li {
+		display: none;
+	}
+
+	.b-header .login-menu-item {
+		display: inline;
+		border: none;
+	}
+
+	.b-main-menu .menu {
+		display: none;
+	}
+
+	.b-main-menu #mobile-menu-button {
+		display: block;
+	}
+
+	.b-main-menu .page-title {
+		display: table;
+	}
+
+	.b-left-panel {
+		display: none;
+	}
+
+	.b-right-panel {
+		display: none;
+	}
+}
+
+@media (min-width: 2000px) {
+	.b-page-container .internal-container {
+		width: 2000px;
+	}
+}
+
+@media (max-width: 240px) {
+	.b-page-container .internal-container {
+		width: 240px;
+	}
+}
+
+@media (max-width: 400px) {
+	.b-header .logo2 {
+		display: none;
+	}
+}
+
 /* jQuery UI tools ----------------------------------------------------------------- */
-/* jQuery UI and jqGrid dinamically add some HTML content */
-/* outside any z- prefixed class */
+/* jQuery UI and jqGrid dynamically add some HTML content outside any b- prefixed class */
 
 .jqgrid-error-icon {
 	position:relative;
@@ -406,12 +497,16 @@ a {
 
 /* Text content -------------------------------------------------------------------- */
 
+.b-text-content {
+	font-family: Helvetica, ​arial, ​freesans, ​clean,​ sans-serif;
+	word-wrap: break-word;
+}
+
 .b-text-content a {
 	color: #004165;
 }
 
 .b-text-content h3 {
-	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
 	font-size: 22.5px;
 	font-weight: 700;
 	line-height: 38.25px;
@@ -426,7 +521,6 @@ a {
 }
 
 .b-text-content h4 {
-	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 38.25px;
@@ -438,7 +532,6 @@ a {
 }
 
 .b-text-content p {
-	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
 	font-size: 15px;
 	font-weight: 400;
 	font-style: normal;
@@ -449,7 +542,7 @@ a {
 }
 
 .b-text-content code {
-	font-family: "Liberation Mono",​Courier,​monospace;
+	font-family: "Liberation Mono", ​Courier, ​monospace;
 	font-size: 12px;
 	font-weight: 400;
 	font-style: normal;
@@ -461,22 +554,19 @@ a {
 	border-radius: 3px;
 	padding: 1px;
 	background-color: White;
+	word-wrap: normal;
 }
 
 .b-text-content pre {
-	font-family: "Liberation Mono",​Courier,​monospace;
-	font-size: 12px;
-	font-weight: 400;
-	font-style: normal;
 	color: #333333;
 	line-height: 15.6px;
 	background-color: White;
-
 	border-width: 1px;
 	border-color: #DDDDDD;
 	border-style: solid;
 	border-radius: 3px;
 	padding: 1px;
+	overflow: auto;
 }
 
 .b-text-content pre code {
@@ -490,7 +580,6 @@ a {
 }
 
 .b-text-content li {
-	font-family: Helvetica,​arial,​freesans,​clean,​sans-serif;
 	font-size: 15px;
 	font-weight: 400;
 	font-style: normal;

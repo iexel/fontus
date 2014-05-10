@@ -26,8 +26,11 @@ limitations under the License.
 <title>Fontus</title>
 <meta charset="UTF-8">
 <base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/" />
-<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+
 <link rel="shortcut icon" href="resources/img/logo.ico" />
+
+<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
 </head>
 
 <body class="b-login-page">

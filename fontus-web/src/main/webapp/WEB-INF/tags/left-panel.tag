@@ -47,6 +47,6 @@ limitations under the License.
 				<t:menu-item itemCode="left_menu_administration_task_b" selectedItemCode="${selectedItemCode}" url="admin-task-b"></t:menu-item>
 			</ul>
 		</c:when>
-	</c:choose> 
+	</c:choose>
 	<div class="place-holder"></div>
 </div>

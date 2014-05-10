@@ -26,6 +26,8 @@ $(document).ready(function() {
 		// The user left the page; there is no need to show the error page
 		documentIsUnloaded = true;
 	});
+	
+	$("#mobile-menu").mmenu();
 });
 
 // If the session expires, an AJAX request gets redirected to

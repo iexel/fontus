@@ -31,14 +31,14 @@ limitations under the License.
 	</div>
 	<ul>
 		<sec:authorize access="isAnonymous()">
-			<li><a href="login"><spring:message code="header_menu_login" /></a></li>
+			<li class="login-menu-item"><a href="login"><spring:message code="header_menu_login" /></a></li>
 		</sec:authorize>
 		<sec:authorize access="not isAnonymous()">
-			<li><a href="logout"><spring:message code="header_menu_logout" />: <c:out value="${userName}" /></a></li>
+			<li class="login-menu-item"><a href="logout"><spring:message code="header_menu_logout" />: <c:out value="${userName}" /></a></li>
 		</sec:authorize>
 
 		<li><a href="error/under-construction"><spring:message code="header_menu_help" /></a></li>
 		<li><a href="about"><spring:message code="header_menu_about" /></a></li>
-		<li class="last-menu-item"><a href="error/under-construction"><spring:message code="header_menu_contact_us" /></a></li>
+		<li class="last-menu-item"><a href="error/under-construction"><spring:message code="header_menu_contacts" /></a></li>
 	</ul>
 </div>

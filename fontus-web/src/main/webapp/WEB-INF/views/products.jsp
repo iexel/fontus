@@ -52,4 +52,6 @@ limitations under the License.
 		<p><spring:message code="jqgrid_select_row_message" /></p>
 	</div>
 
+	<div class="place-holder"></div>
+
 </t:master-page>

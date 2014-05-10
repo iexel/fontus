@@ -33,10 +33,8 @@ $(document).ready(function() {
 	attachButtons();
 	decorateButtons();
 	initialiseWarningDialog();
-	setDataGridWidth();
 	$(window).resize(setDataGridWidth);
-	// style the <select>
-	$(".ui-pg-selbox").menu();
+	setDataGridWidth();
 	preloadImages();
 });
 
@@ -56,6 +54,7 @@ function setupGrid() {
 		rowNum:5,
 		rowList:[5,10,20],
 		height:114,
+		width: 1,
 		shrinkToFit:true,
 		sortname:'id',
 		sortorder:"asc",
@@ -171,9 +170,14 @@ function loadErrorCallback(xhr, st, err) {
 
 
 function setDataGridWidth() {
-	var width = $("#b-center-panel").width();
-	$("#dataTable").jqGrid("setColProp", "name", { widthOrg : width - 120 });
-	$("#dataTable").jqGrid("setGridWidth", width);
+	// hack for bottom scrollbar in Chrome that keeps appearing when you click the unmaximise button
+	jQuery('html').css('overflow', 'hidden');
+	
+	var width = $("#content").width();
+	$("#dataTable").jqGrid("setColProp", "name", { widthOrg : width - 130 });
+	$("#dataTable").jqGrid("setGridWidth", width - 10);
+	
+	jQuery('html').css('overflow', 'auto');
 }
 
 // Creates a jQuery UI dialog (hidden at this point)
