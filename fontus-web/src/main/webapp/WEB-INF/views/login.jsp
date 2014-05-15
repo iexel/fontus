@@ -30,6 +30,7 @@ limitations under the License.
 <base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/" />
 
 <link rel="shortcut icon" href="resources/img/logo.ico" />
+<link rel="apple-touch-icon-precomposed" href="resources/img/logo.png"/>
 
 <link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
