@@ -31,9 +31,9 @@ $(document).ready(function() {
 	//setTooltips();
 });
 
-function setTooltips() {
-	$('[title]').qtip( { style: { classes: 'qtip-cream qtip-rounded qtip-shadow' } } );
-}
+//function setTooltips() {
+//	$('[title]').qtip( { style: { classes: 'qtip-cream qtip-rounded qtip-shadow' } } );
+//}
 
 // If the session expires, an AJAX request gets redirected to
 // the login page. This method checks the response: whether

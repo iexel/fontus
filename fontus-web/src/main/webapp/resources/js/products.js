@@ -62,7 +62,7 @@ function setupGrid() {
 		viewrecords:true,
 		caption:gridCaption, // defined in the JSP file for localization purposes
 		loadError:loadErrorCallback, // error handler; add/edit/delete errors are processed by other methods
-		loadComplete: setTooltips, // is called after loading all data to the grid
+		//loadComplete: setTooltips, // is called after loading all data to the grid
 		autoencode:true //when set to true encodes (HTML encode) the incoming (from server) and posted data. It prevents Cross-site scripting (XSS) attacks.
 		//The posted data should not be encoded - it's de-encoded in serializeEditDataCallback().
 	});
