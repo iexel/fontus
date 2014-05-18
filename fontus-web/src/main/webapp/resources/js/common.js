@@ -28,7 +28,7 @@ $(document).ready(function() {
 	});
 	
 	$("#mobile-menu").mmenu();
-	setTooltips();
+	//setTooltips();
 });
 
 function setTooltips() {

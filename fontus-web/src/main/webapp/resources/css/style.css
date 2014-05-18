@@ -409,7 +409,7 @@ a {
 .b-login-page .login-form {
 	position: absolute;
 	height: 200px;
-	width: 400px;
+	width: 330px;
 	margin: -100px 0 0 -165px;
 	top: 50%;
 	left: 50%;
@@ -578,6 +578,11 @@ a {
 
 	.b-right-panel {
 		display: none;
+	}
+	
+	.b-login-page .login-form {
+		margin-left: 0px;
+		left: 30px;
 	}
 }
 
