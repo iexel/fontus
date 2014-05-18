@@ -434,58 +434,6 @@ a {
 	font-weight: bold;
 }
 
-/* Adjusting a page for small and high resolutions---------------------------------- */
-
-@media (max-width: 800px) {
-
-	.b-header li {
-		display: none;
-	}
-
-	.b-header .login-menu-item {
-		display: inline;
-		border: none;
-	}
-
-	.b-main-menu .menu {
-		display: none;
-	}
-
-	.b-main-menu #mobile-menu-button {
-		display: block;
-	}
-
-	.b-main-menu .page-title {
-		display: table;
-	}
-
-	.b-left-panel {
-		display: none;
-	}
-
-	.b-right-panel {
-		display: none;
-	}
-}
-
-@media (min-width: 2000px) {
-	.b-page-container .internal-container {
-		width: 2000px;
-	}
-}
-
-@media (max-width: 240px) {
-	.b-page-container .internal-container {
-		width: 240px;
-	}
-}
-
-@media (max-width: 400px) {
-	.b-header .logo2 {
-		display: none;
-	}
-}
-
 /* jQuery UI tools ----------------------------------------------------------------- */
 /* jQuery UI and jqGrid dynamically add some HTML content outside any b- prefixed class */
 
@@ -493,6 +441,10 @@ a {
 	position:relative;
 	top:5px;
 	margin-left:5px;
+}
+
+.ui-state-error {
+	padding: 3px;
 }
 
 /* Text content -------------------------------------------------------------------- */
@@ -591,4 +543,58 @@ a {
 
 .b-text-content strong {
 	font-weight: 700;
+}
+
+
+
+/* Adjusting a page for small and high resolutions---------------------------------- */
+
+@media (max-width: 800px) {
+
+	.b-header li {
+		display: none;
+	}
+
+	.b-header .login-menu-item {
+		display: inline;
+		border: none;
+	}
+
+	.b-main-menu .menu {
+		display: none;
+	}
+
+	.b-main-menu #mobile-menu-button {
+		display: block;
+	}
+
+	.b-main-menu .page-title {
+		display: table;
+	}
+
+	.b-left-panel {
+		display: none;
+	}
+
+	.b-right-panel {
+		display: none;
+	}
+}
+
+@media (min-width: 2000px) {
+	.b-page-container .internal-container {
+		width: 2000px;
+	}
+}
+
+@media (max-width: 240px) {
+	.b-page-container .internal-container {
+		width: 240px;
+	}
+}
+
+@media (max-width: 400px) {
+	.b-header .logo2 {
+		display: none;
+	}
 }

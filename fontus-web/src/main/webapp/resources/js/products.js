@@ -62,6 +62,7 @@ function setupGrid() {
 		viewrecords:true,
 		caption:gridCaption, // defined in the JSP file for localization purposes
 		loadError:loadErrorCallback, // error handler; add/edit/delete errors are processed by other methods
+		loadComplete: setTooltips, // is called after loading all data to the grid
 		autoencode:true //when set to true encodes (HTML encode) the incoming (from server) and posted data. It prevents Cross-site scripting (XSS) attacks.
 		//The posted data should not be encoded - it's de-encoded in serializeEditDataCallback().
 	});
@@ -140,7 +141,8 @@ function errorTextFormatCallback(xhr) {
 			$(selector).after( "<img title='" + validationErrors[i+1] + "' class='jqgrid-error-icon' src='resources/img/validation-error.png'></img>" );
 		}
 	}
-	
+	$('.jqgrid-error-icon[title]').qtip( { style: { classes: 'qtip-red qtip-rounded qtip-shadow' } } );
+
 	return xhr.responseJSON.localErrorMessage;
 }
 
@@ -164,7 +166,6 @@ function loadErrorCallback(xhr, st, err) {
 		jQuery("#error-message").html(xhr.responseJSON.localErrorMessage);
 	}
 }
-
 
 // other methods --------------------------------------------------------------------
 
@@ -254,10 +255,7 @@ function decorateButtons()
 }
 
 function preloadImages() {
-	// Switch the comment if you use local (not CDN) jQuery UI.
-	//var themeImagesDir = "resources/css/jquery-ui/redmond/images/";
 	var themeImagesDir = "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/redmond/images/";
-
 	$('<img/>')[0].src = themeImagesDir + "ui-icons_217bc0_256x240.png";
 	$('<img/>')[0].src = themeImagesDir + "ui-icons_f9bd01_256x240.png";
 }

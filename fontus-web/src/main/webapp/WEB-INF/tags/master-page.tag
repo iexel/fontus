@@ -39,6 +39,7 @@ limitations under the License.
 <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/redmond/jquery-ui.css" />
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jqgrid/4.5.4/css/ui.jqgrid.css" />
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.mmenu/4.2.5/css/jquery.mmenu.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.css" />
 <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -46,6 +47,7 @@ limitations under the License.
 <script src="//cdn.jsdelivr.net/jqgrid/4.5.4/i18n/grid.locale-${userLocale.language}.js"></script>
 <script src="//cdn.jsdelivr.net/jqgrid/4.5.4/jquery.jqGrid.min.js"></script>
 <script src="//cdn.jsdelivr.net/jquery.mmenu/4.2.5/js/jquery.mmenu.min.js"></script>
+<script src="//cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js"></script>
 <script src="resources/js/common.js"></script>
 </head>
 
