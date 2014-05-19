@@ -26,8 +26,8 @@ $(document).ready(function() {
 		// The user left the page; there is no need to show the error page
 		documentIsUnloaded = true;
 	});
-	
-	$("#mobile-menu").mmenu();
+
+	$("#mobile-menu").mmenu( {slidingSubmenus: false} );
 	//setTooltips();
 });
 

@@ -314,6 +314,11 @@ a {
 
 .b-center-panel button {
 	font-size: 10px;
+	margin-bottom: 5px;
+}
+
+.b-center-panel .button-block {
+	white-space: nowrap;
 }
 
 .b-center-panel .error-message {
@@ -423,6 +428,15 @@ a {
 	color: Red;
 }
 
+.b-login-page .field {
+	width: 180px;
+	margin-bottom: 5px;
+}
+
+.b-login-page .button {
+	margin-right: 5px;
+}
+
 .b-login-page .tip-message {
 	width: 300px;
 	text-align: center;
@@ -445,6 +459,11 @@ a {
 
 .ui-state-error {
 	padding: 3px;
+}
+
+#mobile-menu {
+	background-color: white;
+	color: black;
 }
 
 /* Text content -------------------------------------------------------------------- */

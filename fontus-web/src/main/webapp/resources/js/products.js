@@ -35,6 +35,8 @@ $(document).ready(function() {
 	initialiseWarningDialog();
 	$(window).resize(setDataGridWidth);
 	setDataGridWidth();
+	// style the <select> in the grid paging section
+	$(".ui-pg-selbox").menu();
 	preloadImages();
 });
 
