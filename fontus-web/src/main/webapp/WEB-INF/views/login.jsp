@@ -46,29 +46,15 @@ limitations under the License.
 		</div>
 
 		<form method="POST" action="j_spring_security_check">
-			<table>
-				<tr>
-					<td><spring:message code="login_page_user_name" />: &nbsp;&nbsp;</td>
-					<td><input name="j_username" type="text" class="field" /></td>
-				</tr>
-				<tr>
-					<td><spring:message code="login_page_password" />: &nbsp;&nbsp;</td>
-					<td><input name="j_password" type="password" class="field" /></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>
-						<input type="submit" class="button" value="<spring:message code="login_page_submit_button" />" />
-						<input type="button" class="button" onclick="location.href='about'" value="<spring:message code="login_page_back_button" />" />
-					</td>
-				</tr>
-			</table>
+			<spring:message code="login_page_user_name" />:<br/>
+			<input name="j_username" type="text" class="field" /><br/>
+			<spring:message code="login_page_password" />:<br/>
+			<input name="j_password" type="password" class="field" /><br/>
+			<input type="submit" class="button" value="<spring:message code="login_page_submit_button" />" />
+			<input type="button" class="button" onclick="location.href='about'" value="<spring:message code="login_page_back_button" />" /><br/>
 		</form>
 
-		<div class="tip-message">
-			<spring:message code="login_page_tip_message" />
-		</div>
-
+		<div class="tip-message"><spring:message code="login_page_tip_message" /></div>
 	</div>
 
 </body>

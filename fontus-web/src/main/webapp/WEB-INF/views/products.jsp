@@ -33,12 +33,12 @@ limitations under the License.
 
 	<div class="dataGrid" id="dataGrid">
 		<span class="button-block">
-			<button id="addBtn"><spring:message code="jqgrid_add" /></button>
+			<button id="addBtn"><spring:message code="jqgrid_add" /></button>&nbsp;&nbsp;
 			<button id="editBtn"><spring:message code="jqgrid_edit" /></button>
-		</span>
+		</span>&nbsp;
 		<span class="button-block">
-			<button id="deleteBtn"><spring:message code="jqgrid_delete" /></button>
-			<button id="searchBtn"><spring:message code="jqgrid_search" /></button>
+			<button id="deleteBtn"><spring:message code="jqgrid_delete" /></button>&nbsp;&nbsp;
+			<button id="searchBtn"><spring:message code="jqgrid_search" /></button>&nbsp;&nbsp;
 			<button id="refreshBtn"><spring:message code="jqgrid_refresh" /></button>
 		</span>
 
