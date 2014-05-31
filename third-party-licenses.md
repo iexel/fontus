@@ -1,6 +1,6 @@
 ###Credits and third party licensing information 
 
-All third party libraries used in this project are both Free and Open Source software. Most of third-party images are in the Public Domain. 
+All third party libraries used in this project are both Free and Open Source software. Most of the third-party images are in the Public Domain.
 
 This document lists the libraries and images used in the project, provides the text of their licenses and any notices that should be provided under the terms of these licenses. The document also explains how the source code of the libraries can be obtained. 
 
