@@ -113,6 +113,10 @@ limitations under the License.
 
 <p>The following third-party JavaScript libraries are used in the application: jQuery, jQuery UI, jqGrid, mmenu, and Layout Engine. The use of jQuery UI is limited; most of the HTML is manually coded, and styled with CSS.</p>
 
+<h4>Mobile phones and tablets</h4>
+
+<p>The application has a fluid and responsive HTML layout which adapts well to mobile phone and tablet screens. The responsiveness is implemented using CSS media queries. A separate compact mobile menu is used on narrow screens.</p>
+
 <h4>
 <a class="anchor" href="#logging-framework"><span class="octicon octicon-link"></span></a>Logging framework</h4>
 

@@ -79,6 +79,10 @@ If an error happens while the web server is processing a request that should ret
 
 The following third-party JavaScript libraries are used in the application: jQuery, jQuery UI, jqGrid, mmenu, and Layout Engine. The use of jQuery UI is limited; most of the HTML is manually coded, and styled with CSS.
 
+####Mobile phones and tablets
+
+The application has a fluid and responsive HTML layout which adapts well to mobile phone and tablet screens. The responsiveness is implemented using CSS media queries. A separate compact mobile menu is used on narrow screens.
+
 ####Logging framework
 
 The application uses slf4j API with log4j implementation for logging.
