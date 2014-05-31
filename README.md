@@ -89,7 +89,7 @@ In-memory dummy service is used instead of a DB.
 
 ####Browser compatibility
 
-Desktop browser: the current version and the second last version of FireFox, Chrome and Opera; Safari 5.0+, IE 9+
+Desktop browsers: the current version and the second last version of FireFox, Chrome and Opera; Safari 5.0+, IE 9+
 
 Mobile browsers: Android Browser (AOSP) 2.3+, Chrome for Mobile
 
