@@ -46,7 +46,7 @@ function resizeCodeBlocks() {
 <h3>
 <a class="anchor" href="#credits-and-third-party-licensing-information"><span class="octicon octicon-link"></span></a>Credits and third party licensing information</h3>
 
-<p>All third party libraries used in this project are both Free and Open Source software. Most of third-party images are in the Public Domain. </p>
+<p>All third party libraries used in this project are both Free and Open Source software. Most of the third-party images are in the Public Domain.</p>
 
 <p>This document lists the libraries and images used in the project, provides the text of their licenses and any notices that should be provided under the terms of these licenses. The document also explains how the source code of the libraries can be obtained. </p>
 
@@ -54,14 +54,12 @@ function resizeCodeBlocks() {
 
 <p>Most Java libraries are not distributed with the source code version of this project. They are downloaded by Maven at build time. However, they are a part of the distribution when a binary version of this project (a <code>.war</code> file) is distributed. Some libraries used for unit testing are never distributed with any version of this project. They are downloaded by Maven and used at build time only. These libraries have an appropriate comment in their description. </p>
 
-<p>In this document, some third-party libraries and images have their license texts provided directly below their description. Others refer to licenses provided in a separate section of this document. Usually, if a library/image has its license text provided directly below its description (specifically for this library/image), the license has some modifications that are specific to this  library/image (e.g. a copyright notice, additional terms, or additional licenses for its subcomponents).</p>
-
 <h3>
 <a class="anchor" href="#source-code"><span class="octicon octicon-link"></span></a>Source code</h3>
 
 <p>The source code of most third-party Maven artifacts can be downloaded from the <a href="http://search.maven.org/">Maven Central Repository</a>. All Maven artifacts that have to be distributed with their source code (according to their license requirements) have their source code available this way. To download the source code and/or JavaDoc: </p>
 
-<ul>
+<ul class="task-list">
 <li>Click <code>Advanced Search</code> on the front page of the <a href="http://search.maven.org/">Maven Central Repository</a>. </li>
 <li>Enter <code>GroupId</code>, <code>ArtifactId</code> and <code>Version</code> of the Maven artifact and click <code>SEARCH</code>. </li>
 <li>The search results will contain links for downloading the binary artifact, its source code, and JavaDoc. </li>
@@ -110,7 +108,7 @@ http://sizzlejs.com/
 </code></pre>
 
 <h4>
-<a class="anchor" href="#jquery-ui---v1103"><span class="octicon octicon-link"></span></a>jQuery UI - v1.10.3</h4>
+<a class="anchor" href="#jquery-ui-v1103"><span class="octicon octicon-link"></span></a>jQuery UI v1.10.3</h4>
 
 <p><strong>Project URL:</strong>  <a href="http://jqueryui.com">http://jqueryui.com</a><br><strong>License names:</strong>  (MIT License)<br><strong>Source of the notice and license information:</strong>  the header of the JavaScript file<br><strong>Notice:</strong> </p>
 
@@ -155,7 +153,7 @@ jquery.ui.effect-transfer.js
 </code></pre>
 
 <h4>
-<a class="anchor" href="#jqgrid--454---jquery-grid"><span class="octicon octicon-link"></span></a>jqGrid  4.5.4 - jQuery Grid</h4>
+<a class="anchor" href="#jqgrid-v454---jquery-grid"><span class="octicon octicon-link"></span></a>jqGrid v4.5.4 - jQuery Grid</h4>
 
 <p><strong>Project URL:</strong>  <a href="http://www.trirand.com">http://www.trirand.com</a><br><strong>License names:</strong>  (<strong>MIT License</strong>), (GNU General Public License, Version 2)<br><strong>Source of the notice and license information:</strong>  the header of the JavaScript file<br><strong>License:</strong> </p>
 
@@ -181,13 +179,67 @@ jquery.ui.effect-transfer.js
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.        
 </code></pre>
 
+<h4>
+<a class="anchor" href="#mmenu-v426"><span class="octicon octicon-link"></span></a>mmenu v4.2.6</h4>
+
+<p><strong>Project URL:</strong>  <a href="http://mmenu.frebsite.nl">http://mmenu.frebsite.nl</a><br><strong>License names:</strong>  (<strong>MIT License</strong>), (GNU General Public License)<br><strong>Source of the notice and license information:</strong>  the header of the JavaScript file<br><strong>License:</strong> </p>
+
+<pre><code> Copyright (c) ____ Fred Heusschen, www.frebsite.nl
+
+ Permission is hereby granted, free of charge, to any person obtaining 
+ a copy of this software and associated documentation files (the 
+ "Software"), to deal in the Software without restriction, including 
+ without limitation the rights to use, copy, modify, merge, publish, 
+ distribute, sublicense, and/or sell copies of the Software, and to 
+ permit persons to whom the Software is furnished to do so, subject to 
+ the following conditions: 
+
+ The above copyright notice and this permission notice shall be included 
+ in all copies or substantial portions of the Software. 
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY 
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.        
+</code></pre>
+
+<h4>
+<a class="anchor" href="#layout-engine-v080"><span class="octicon octicon-link"></span></a>Layout Engine v0.8.0</h4>
+
+<p><strong>Project URL:</strong>  <a href="https://github.com/stowball/Layout-Engine">https://github.com/stowball/Layout-Engine</a><br><strong>License names:</strong>  (MIT License)<br><strong>Source of the notice and license information:</strong>  the header of the JavaScript file<br><strong>License:</strong> </p>
+
+<pre><code> Copyright (c) 2013 Matt Stow, http://mattstow.com
+
+ Permission is hereby granted, free of charge, to any person obtaining 
+ a copy of this software and associated documentation files (the 
+ "Software"), to deal in the Software without restriction, including 
+ without limitation the rights to use, copy, modify, merge, publish, 
+ distribute, sublicense, and/or sell copies of the Software, and to 
+ permit persons to whom the Software is furnished to do so, subject to 
+ the following conditions: 
+
+ The above copyright notice and this permission notice shall be included 
+ in all copies or substantial portions of the Software. 
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY 
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</code></pre>
+
 <h3>
 <a class="anchor" href="#images"><span class="octicon octicon-link"></span></a>Images</h3>
 
 <p>The <code>img</code> directory that contains all images used in the project has a <code>source_images</code> subdirectory. <code>source_images</code> contains a copy of every image unchanged (as it was downloaded from its source). The file names of the source images are also preserved (however a suffix was added to some of them which indicates the image's resolution; e.g., <code>_48x48</code>). In this section, images are referenced by their original (unmodified) file names. </p>
 
 <h4>
-<a class="anchor" href="#applications-development-3png-emblem-important-2png-emblem-important-2_48x48png-applications-internet-3png"><span class="octicon octicon-link"></span></a>applications-development-3.png, emblem-important-2.png, emblem-important-2_48x48.png, applications-internet-3.png</h4>
+<a class="anchor" href="#applications-development-3png-emblem-important-2png-applications-internet-3png"><span class="octicon octicon-link"></span></a>applications-development-3.png, emblem-important-2.png, applications-internet-3.png</h4>
 
 <p><strong>Source:</strong>  <a href="http://openiconlibrary.sourceforge.net/">http://openiconlibrary.sourceforge.net/</a><br><strong>Author:</strong>  tango<br><strong>License names:</strong>  (Public Domain)<br><strong>Source of the notice and license information:</strong>  the license information file distributed with the icon package <br></p>
 
