@@ -89,7 +89,7 @@ In-memory dummy service is used instead of a DB.
 
 ####Browser compatibility
 
-Desktop browswer: the current version and the second last version of FireFox, Chrome and Opera; Safari 5.0+, IE 9+
+Desktop browser: the current version and the second last version of FireFox, Chrome and Opera; Safari 5.0+, IE 9+
 
 Mobile browsers: Android Browser (AOSP) 2.3+, Chrome for Mobile
 
@@ -97,8 +97,8 @@ Mobile browsers: Android Browser (AOSP) 2.3+, Chrome for Mobile
 
 After importing the three Maven projects to Eclipse:
  - Change the encoding to `UTF-8` in the properties of localisation files (`messages_ru.properties` and `messages.properties`). Spring MVC is configured to read these files in `UTF-8`.
- - Exclude the content of the `fontus-web/src/main/webapp/resources/js/libs/` directory from JavaScript validation: In the `fontus-web` project properties select `JavaScript` > `Include Path`, click the `Source` tab, select the `Excluded` node, press `Edit...` button, and add the directory into the `Exclussion pattern` section.
+ - Exclude the content of the `fontus-web/src/main/webapp/resources/js/libs/` directory from JavaScript validation: In the `fontus-web` project properties select `JavaScript` > `Include Path`, click the `Source` tab, select the `Excluded` node, press `Edit...` button, and add the directory into the `Exclussion patterns` section.
 
-###Screenshot
+###Screenshots
 
 ![alt text](screenshot.png "Screenshot")
