@@ -156,7 +156,7 @@ a {
 }
 
 .b-main-menu .menu .selected a {
-	color: White;
+	color: white;
 }
 
 .b-main-menu .locale {
@@ -197,7 +197,7 @@ a {
 	position: absolute;
 	top: 0px;
 	left: 50px;
-	display: none; /*set to "table" to display the title (for vertical-alignment)*/
+	display: none; /*Set it to "table" to display the title (for vertical-alignment).*/
 }
 
 .b-main-menu .page-title div{
@@ -286,30 +286,6 @@ a {
 
 .b-center-panel .dataGrid {
 	position: absolute;
-}
-
-/* this rule makes jqGrid work with the CSS reset */
-.b-center-panel .ui-jqgrid table {
-	border-collapse: separate;
-}
-
-.b-center-panel .grid-col {
-	padding-right: 5px !important;
-	padding-left: 5px !important;
-	vertical-align: middle;
-}
-
-.b-center-panel .ui-jqgrid-bdiv {
-	scrollbar-arrow-color: black;
-	scrollbar-base-color: white;
-	scrollbar-face-color: white;
-}
-
-.b-center-panel .ui-pg-input {
-	border: 1px;
-	border-color: #A6C9E2;
-	border-style: solid;
-	border-radius: 4px;
 }
 
 .b-center-panel button {
@@ -455,22 +431,76 @@ a {
 	font-weight: bold;
 }
 
-/* jQuery UI tools ----------------------------------------------------------------- */
-/* jQuery UI and jqGrid dynamically add some HTML content outside any b- prefixed class */
+/*
+	Hacks that make JavaScript components (jqGrid, jQuery UI, mmenu, etc.) look properly.
 
-.jqgrid-error-icon {
-	position:relative;
-	top:5px;
-	margin-left:5px;
-}
+	(Some JavaScript libraries dynamically add some HTML content outside any b-prefixed class,
+	so some CSS classes in this section are not preceded with a b-class.)
+*/
 
+/*error message which appears at the top of the create/edit form*/
 .ui-state-error {
-	padding: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5px;
+	border: none !important;
+	background: none !important;
+	font-weight: 700;
 }
 
+/*validation error message which appears near each field in a form*/
+.field-error-message {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #CD0A0A;
+	padding: 1px 0px 2px 5px;
+	width: 160px;
+}
+
+/*listboxes in the filter form*/
+.searchFilter select {
+	margin-right: 10px;
+}
+
+/*mobile menu*/
 #mobile-menu {
 	background-color: white;
 	color: black;
+}
+
+/*The shade (overlay) behind jQuery UI dialogs does not work on mobile devices, and is switched off.*/
+.ui-widget-overlay {
+	background: none;
+}
+
+/*This rule makes jqGrid work with the CSS reset.*/
+.b-center-panel .ui-jqgrid table {
+	border-collapse: separate;
+}
+
+/*a data grid cell*/
+.b-center-panel .grid-col {
+	padding-right: 2px !important;
+	padding-left: 2px !important;
+	vertical-align: middle;
+}
+
+/*This rule make scrollbars look better in IE.*/
+.b-center-panel .ui-jqgrid-bdiv {
+	scrollbar-arrow-color: black;
+	scrollbar-base-color: white;
+	scrollbar-face-color: white;
+}
+
+/*The page number in the data grid bottom bar.*/
+.b-center-panel .ui-pg-input {
+	border: 1px solid #A6C9E2;
+	border-radius: 4px;
+}
+
+/*The page size in the data grid bottom bar.*/
+html:not(.browser-android) .b-center-panel .ui-pg-selbox {
+	border: 1px solid #A6C9E2;
+	border-radius: 4px;
+	background-color: white;
 }
 
 /* Text content -------------------------------------------------------------------- */
@@ -526,13 +556,13 @@ a {
 	font-style: normal;
 	color: #333333;
 	line-height: 15.6px;
+	padding: 1px;
+	background-color: White;
+	word-wrap: normal;
 	border-width: 1px;
 	border-color: #DDDDDD;
 	border-style: solid;
 	border-radius: 3px;
-	padding: 1px;
-	background-color: White;
-	word-wrap: normal;
 }
 
 .b-text-content pre {
@@ -545,6 +575,7 @@ a {
 	border-radius: 3px;
 	padding: 1px;
 	overflow: auto;
+	word-wrap: normal;
 }
 
 .b-text-content pre code {
@@ -609,6 +640,10 @@ a {
 	.b-login-page .login-form {
 		margin-left: 0px;
 		left: 30px;
+	}
+	
+	.b-center-panel .ui-paging-info {
+		display: none;
 	}
 }
 

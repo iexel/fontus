@@ -25,7 +25,7 @@ limitations under the License.
 <head>
 <title>Fontus</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0; minimum-scale=1.0;" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1" />
 
 <base href="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/" />
 

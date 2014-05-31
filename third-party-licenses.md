@@ -8,8 +8,6 @@ Some libraries and images were released with more than one license by their copy
 
 Most Java libraries are not distributed with the source code version of this project. They are downloaded by Maven at build time. However, they are a part of the distribution when a binary version of this project (a `.war` file) is distributed. Some libraries used for unit testing are never distributed with any version of this project. They are downloaded by Maven and used at build time only. These libraries have an appropriate comment in their description. 
 
-In this document, some third-party libraries and images have their license texts provided directly below their description. Others refer to licenses provided in a separate section of this document. Usually, if a library/image has its license text provided directly below its description (specifically for this library/image), the license has some modifications that are specific to this  library/image (e.g. a copyright notice, additional terms, or additional licenses for its subcomponents).
-
 ###Source code
 
 The source code of most third-party Maven artifacts can be downloaded from the [Maven Central Repository](http://search.maven.org/). All Maven artifacts that have to be distributed with their source code (according to their license requirements) have their source code available this way. To download the source code and/or JavaDoc: 
@@ -62,7 +60,7 @@ http://sizzlejs.com/
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.        
 ``` 
 
-####jQuery UI - v1.10.3 
+####jQuery UI v1.10.3 
 **Project URL:**  http://jqueryui.com<br> 
 **License names:**  (MIT License)<br> 
 **Source of the notice and license information:**  the header of the JavaScript file<br> 
@@ -107,7 +105,7 @@ jquery.ui.effect-transfer.js
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.        
 ``` 
 
-####jqGrid  4.5.4 - jQuery Grid 
+####jqGrid v4.5.4 - jQuery Grid 
 **Project URL:**  http://www.trirand.com<br> 
 **License names:**  (**MIT License**), (GNU General Public License, Version 2)<br> 
 **Source of the notice and license information:**  the header of the JavaScript file<br> 
@@ -135,12 +133,68 @@ jquery.ui.effect-transfer.js
  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.        
 ``` 
 
+####mmenu v4.2.6
+**Project URL:**  http://mmenu.frebsite.nl<br> 
+**License names:**  (**MIT License**), (GNU General Public License)<br> 
+**Source of the notice and license information:**  the header of the JavaScript file<br> 
+**License:** 
+``` 
+ Copyright (c) ____ Fred Heusschen, www.frebsite.nl
+
+ Permission is hereby granted, free of charge, to any person obtaining 
+ a copy of this software and associated documentation files (the 
+ "Software"), to deal in the Software without restriction, including 
+ without limitation the rights to use, copy, modify, merge, publish, 
+ distribute, sublicense, and/or sell copies of the Software, and to 
+ permit persons to whom the Software is furnished to do so, subject to 
+ the following conditions: 
+ 
+ The above copyright notice and this permission notice shall be included 
+ in all copies or substantial portions of the Software. 
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY 
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.        
+``` 
+
+####Layout Engine v0.8.0
+**Project URL:**  https://github.com/stowball/Layout-Engine<br> 
+**License names:**  (MIT License)<br> 
+**Source of the notice and license information:**  the header of the JavaScript file<br> 
+**License:** 
+``` 
+ Copyright (c) 2013 Matt Stow, http://mattstow.com
+
+ Permission is hereby granted, free of charge, to any person obtaining 
+ a copy of this software and associated documentation files (the 
+ "Software"), to deal in the Software without restriction, including 
+ without limitation the rights to use, copy, modify, merge, publish, 
+ distribute, sublicense, and/or sell copies of the Software, and to 
+ permit persons to whom the Software is furnished to do so, subject to 
+ the following conditions: 
+ 
+ The above copyright notice and this permission notice shall be included 
+ in all copies or substantial portions of the Software. 
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY 
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+``` 
+
 
 ###Images 
 
 The `img` directory that contains all images used in the project has a `source_images` subdirectory. `source_images` contains a copy of every image unchanged (as it was downloaded from its source). The file names of the source images are also preserved (however a suffix was added to some of them which indicates the image's resolution; e.g., `_48x48`). In this section, images are referenced by their original (unmodified) file names. 
 
-####applications-development-3.png, emblem-important-2.png, emblem-important-2_48x48.png, applications-internet-3.png 
+####applications-development-3.png, emblem-important-2.png, applications-internet-3.png 
 **Source:**  http://openiconlibrary.sourceforge.net/<br> 
 **Author:**  tango<br> 
 **License names:**  (Public Domain)<br> 

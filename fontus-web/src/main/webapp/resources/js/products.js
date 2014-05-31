@@ -23,8 +23,8 @@ var URL = base + "rest/products";
 // and (b) in the initialization of the navigation bar.
 // Similar settings can be used in a third way: (c) $.extend($.jgrid.edit, {}); $.extend($.jgrid.del, {}); $.extend($.jgrid.search, {});
 var jqGridNavBarOptions = {edit:false, add:false, del:false, search:false, refresh:true};
-var jqGridEditOptions = {reloadAfterSubmit:false, mtype:"PUT",  closeAfterEdit:true, recreateForm:true, serializeEditData:serializeEditDataCallback, errorTextFormat:errorTextFormatCallback, onclickSubmit:onclickSubmitEditCallback, afterSubmit:afterSubmitCallback, onclickPgButtons:cleanEditForm, width:320};
-var jqGridAddOptions =  {reloadAfterSubmit:false, mtype:"POST", closeAfterAdd:true,  recreateForm:true, serializeEditData:serializeEditDataCallback, errorTextFormat:errorTextFormatCallback,                                          afterSubmit:afterSubmitCallback};
+var jqGridEditOptions = {reloadAfterSubmit:false, mtype:"PUT", modal: true, closeAfterEdit:true, recreateForm:true, serializeEditData:serializeEditDataCallback, errorTextFormat:errorTextFormatCallback, onclickSubmit:onclickSubmitEditCallback, afterSubmit:afterSubmitCallback, onclickPgButtons:cleanEditForm};
+var jqGridAddOptions =  {reloadAfterSubmit:false, mtype:"POST", modal: true, closeAfterAdd:true,  recreateForm:true, serializeEditData:serializeEditDataCallback, errorTextFormat:errorTextFormatCallback,                                          afterSubmit:afterSubmitCallback};
 var jqGridDelOptions =  {reloadAfterSubmit:false, mtype:"DELETE",                                       serializeDelData:serializeDelDataCallback,                                            onclickSubmit:onclickSubmitDelCallback};
 var jqGridSearchOptions = {sopt:['cn','bw','eq','ne','lt','gt','ew']};
 
@@ -35,8 +35,6 @@ $(document).ready(function() {
 	initialiseWarningDialog();
 	$(window).resize(setDataGridWidth);
 	setDataGridWidth();
-	// style the <select> in the grid paging section
-	$(".ui-pg-selbox").menu();
 	preloadImages();
 });
 
@@ -64,8 +62,8 @@ function setupGrid() {
 		viewrecords:true,
 		caption:gridCaption, // defined in the JSP file for localization purposes
 		loadError:loadErrorCallback, // error handler; add/edit/delete errors are processed by other methods
-		//loadComplete: setTooltips, // is called after loading all data to the grid
-		autoencode:true //when set to true encodes (HTML encode) the incoming (from server) and posted data. It prevents Cross-site scripting (XSS) attacks.
+		//loadComplete: ... // is called after loading all data to the grid
+		autoencode:true, //when set to true encodes (HTML encode) the incoming (from server) and posted data. It prevents Cross-site scripting (XSS) attacks.
 		//The posted data should not be encoded - it's de-encoded in serializeEditDataCallback().
 	});
 
@@ -140,17 +138,16 @@ function errorTextFormatCallback(xhr) {
 
 		for (var i = 0; i < validationErrors.length; i += 2) {
 			var selector = ".DataTD #" + validationErrors[i];
-			$(selector).after( "<img title='" + validationErrors[i+1] + "' class='jqgrid-error-icon' src='resources/img/validation-error.png'></img>" );
+			$(selector).after( "<div class='field-error-message'>" + validationErrors[i+1] + "</div>" );
 		}
 	}
-	$('.jqgrid-error-icon[title]').qtip( { style: { classes: 'qtip-red qtip-rounded qtip-shadow' } } );
 
 	return xhr.responseJSON.localErrorMessage;
 }
 
 // removes error icons from an add/edit form
 function cleanEditForm() {
-	$(".jqgrid-error-icon").remove();
+	$(".field-error-message").remove();
 }
 
 //set the ID of the new row in the grid 
@@ -173,9 +170,9 @@ function loadErrorCallback(xhr, st, err) {
 
 
 function setDataGridWidth() {
-	// hack for bottom scrollbar in Chrome that keeps appearing when you click the unmaximise button
-	jQuery('html').css('overflow', 'hidden');
-	
+	jQuery('html').css('overflow', 'hidden'); // hack for bottom scrollbar in
+	// Chrome that keeps appearing when you click the unmaximise button
+
 	var width = $("#content").width();
 	$("#dataTable").jqGrid("setColProp", "name", { widthOrg : width - 130 });
 	$("#dataTable").jqGrid("setGridWidth", width - 10);

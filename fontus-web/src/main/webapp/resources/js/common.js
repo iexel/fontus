@@ -28,12 +28,7 @@ $(document).ready(function() {
 	});
 
 	$("#mobile-menu").mmenu( {slidingSubmenus: false} );
-	//setTooltips();
 });
-
-//function setTooltips() {
-//	$('[title]').qtip( { style: { classes: 'qtip-cream qtip-rounded qtip-shadow' } } );
-//}
 
 // If the session expires, an AJAX request gets redirected to
 // the login page. This method checks the response: whether
@@ -68,3 +63,9 @@ function ajaxErrorHandler(event, jqxhr, settings, exception) {
 		//window.location.assign(base + "error/" + jqxhr.responseJSON.globalErrorCode);
 	}
 }
+
+//<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.css" />
+//<script src="//cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js"></script>
+//function setTooltips() {
+//$('[title]').qtip( { style: { classes: 'qtip-cream qtip-rounded qtip-shadow' } } );
+//}

@@ -42,13 +42,15 @@ limitations under the License.
 						<li><a href="invoices"><spring:message code="left_menu_invoices" /></a></li>
 					</ul>
 				</li>
-				<li>
-					<span><spring:message code="main_menu_administration" /></span>
-					<ul>
-						<li><a href="admin-task-a"><spring:message code="left_menu_administration_task_a" /></a></li>
-						<li><a href="admin-task-b"><spring:message code="left_menu_administration_task_b" /></a></li>
-					</ul>
-				</li>
+				<sec:authorize access="hasRole('ROLE_ADMINISTRATOR')">
+					<li>
+						<span><spring:message code="main_menu_administration" /></span>
+						<ul>
+							<li><a href="admin-task-a"><spring:message code="left_menu_administration_task_a" /></a></li>
+							<li><a href="admin-task-b"><spring:message code="left_menu_administration_task_b" /></a></li>
+						</ul>
+					</li>
+				</sec:authorize>
 				<li>
 					<span><spring:message code="main_menu_about" /></span>
 					<ul>
