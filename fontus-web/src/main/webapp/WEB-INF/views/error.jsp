@@ -45,7 +45,7 @@ limitations under the License.
 				<a href="javascript:history.go(-1)"><spring:message code="error_back" /></a>
 			</c:when> 
 			<c:when test="${errorId == 'session-expired'}">
-				<img alt="<spring:message code="error_alt" />" src="resources/img/session-expired.svg">
+				<img alt="<spring:message code="error_alt" />" src="resources/img/session-expired.png">
 				<spring:message code="error_session_expired" />&nbsp;
 				<a href="about"><spring:message code="error_home" /></a>
 			</c:when>
