@@ -8,6 +8,10 @@ This project is a template/demo of a CRUD web application. It uses Spring Web MV
 
 Why is it called Fontus? In the ancient Roman religion, Fontus was the god of wells and springs.
 
+###Screenshots
+
+![alt text](screenshot.png "Screenshot")
+
 ###Online deployment
 
 You can check this web application online at http://demo.alexey.cloudbees.net (login: `admin`, password: `admin` for access to the protected pages). The free Java EE hosting at CloudBees provides limited resources, and the application can be slow at times.
@@ -98,7 +102,3 @@ Mobile browsers: Android Browser (AOSP) 2.3+, Chrome for Mobile
 After importing the three Maven projects to Eclipse:
  - Change the encoding to `UTF-8` in the properties of localisation files (`messages_ru.properties` and `messages.properties`). Spring MVC is configured to read these files in `UTF-8`.
  - Exclude the content of the `fontus-web/src/main/webapp/resources/js/libs/` directory from JavaScript validation (third-party libraries tend to produce validation warnings). In the `fontus-web` project properties select `JavaScript` > `Include Path`, click the `Source` tab, select the `Excluded` node, press `Edit...` button, and add the directory into the `Exclussion patterns` section.
-
-###Screenshots
-
-![alt text](screenshot.png "Screenshot")
