@@ -26,6 +26,10 @@ limitations under the License.
 		<location>/error/error_access_is_denied</location>
 	</error-page>
 	<error-page>
+		<error-code>404</error-code>
+		<location>/error/error_page_not_found</location>
+	</error-page>
+	<error-page>
 		<location>/error/error_unexpected</location>
 	</error-page>
 	<servlet>
