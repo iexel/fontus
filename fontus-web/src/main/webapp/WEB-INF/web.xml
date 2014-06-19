@@ -20,7 +20,9 @@ limitations under the License.
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	version="3.0">
+
 	<display-name>Demo Web Application</display-name>
+
 	<error-page>
 		<error-code>403</error-code>
 		<location>/error/error_access_is_denied</location>
@@ -32,6 +34,7 @@ limitations under the License.
 	<error-page>
 		<location>/error/error_unexpected</location>
 	</error-page>
+
 	<servlet>
 		<servlet-name>spring-mvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -41,6 +44,7 @@ limitations under the License.
 		<servlet-name>spring-mvc</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+
 	<filter>
 		<filter-name>httpPutFormFilter</filter-name>
 		<filter-class>org.springframework.web.filter.HttpPutFormContentFilter</filter-class>
@@ -49,15 +53,16 @@ limitations under the License.
 		<filter-name>httpPutFormFilter</filter-name>
 		<servlet-name>spring-mvc</servlet-name>
 	</filter-mapping>
+
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>
-		/WEB-INF/spring-mvc-security.xml
-	</param-value>
+		<param-value>/WEB-INF/spring-mvc-security.xml</param-value>
 	</context-param>
+
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -74,6 +79,7 @@ limitations under the License.
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
@@ -82,4 +88,33 @@ limitations under the License.
 		<filter-name>springSecurityFilterChain</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
+	<filter>
+		<filter-name>ExpiresFilter</filter-name>
+		<filter-class>org.apache.catalina.filters.ExpiresFilter</filter-class>
+		<init-param>
+			<param-name>ExpiresByType image</param-name>
+			<param-value>access plus 30 days</param-value>
+		</init-param>
+		<!--
+		<init-param>
+			<param-name>ExpiresByType text/css</param-name>
+			<param-value>access plus 10 hours</param-value>
+		</init-param>
+		<init-param>
+			<param-name>ExpiresByType application/javascript</param-name>
+			<param-value>access plus 10 minutes</param-value>
+		</init-param>
+		-->
+		<!-- Everything else expires immediately: -->
+		<init-param>
+			<param-name>ExpiresDefault</param-name>
+			<param-value>access plus 0 seconds</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>ExpiresFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>	
 </web-app>
