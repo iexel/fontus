@@ -24,10 +24,14 @@ limitations under the License.
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-	<!-- Enable Spring Security with HTTP basic authentication. -->
-	<http auto-config="true" use-expressions="true" >
-		<http-basic />
+	<!-- RESTful web services use basic (not form) authentication. --> 
+	<http pattern="/rest/**" use-expressions="true">
+		<http-basic entry-point-ref="restAuthenticationEntryPoint" />
+		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+	</http>
 
+	<!-- Web pages use form (not basic) authentication. -->
+	<http auto-config="true" use-expressions="true">
 		<logout logout-url="/logout" logout-success-url="/about" invalidate-session="true" delete-cookies="JSESSIONID" />
 		<form-login login-page="/login" default-target-url="/about" authentication-failure-url="/login?failed=true"/>
 
@@ -45,6 +49,9 @@ limitations under the License.
 		<authentication-provider ref="customAuthenticationProvider" />
 	</authentication-manager>
 
-	<beans:bean name="customAuthenticationProvider" class="net.myproject.security.CustomAuthenticationProvider" />	
+	<beans:bean name="customAuthenticationProvider" class="net.myproject.security.CustomAuthenticationProvider" />
+	<beans:bean name="restAuthenticationEntryPoint" class="net.myproject.security.RestAuthenticationEntryPoint">
+		<beans:property name="realmName" value="AJAX realm" />
+	</beans:bean>	
 
 </beans:beans>

@@ -62,12 +62,12 @@ public class JspController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginPage(Model model, HttpServletResponse response, @RequestParam(required = false) String failed) {
 
-		response.setHeader("LoginPageResponseFlag", "true");
 		model.addAttribute("failed", failed);
 		return "login";
 	}
 
-	@RequestMapping(value = "/error/{errorId}", method = RequestMethod.GET)
+	// The error page should accept all HTTP methods as web.xml redirects all types of requests here.
+	@RequestMapping(value = "/error/{errorId}")
 	public String errorPage(@PathVariable("errorId") String errorId, Model model) {
 
 		model.addAttribute("errorId", errorId);
