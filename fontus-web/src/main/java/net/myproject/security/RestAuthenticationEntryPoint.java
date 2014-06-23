@@ -29,7 +29,7 @@ public class RestAuthenticationEntryPoint extends BasicAuthenticationEntryPoint 
 
 	// The commence() method in the base class adds a "WWW-Authenticate" HTTP header,
 	// but the header causes browsers to prompt for user credentials. This class was created to
-	// override the method and to rid of "WWW-Authenticate".
+	// override the method and to rid of "WWW-Authenticate". (Though it is a breach of the HTTP specifications.)
 	@Override
 	public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
 

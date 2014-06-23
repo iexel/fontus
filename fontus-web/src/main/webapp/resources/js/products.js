@@ -17,7 +17,7 @@
 
 // `base` is defined in another script that is used in all pages.
 // It contains the value of the <base> tag in the HTML page.
-var URL = base + "rest/products";
+var URL = base + "ajax/products";
 
 // These settings are used (a) in methods like jQuery("#dataTable").jqGrid('getGridParam', 'selrow');
 // and (b) in the initialization of the navigation bar.

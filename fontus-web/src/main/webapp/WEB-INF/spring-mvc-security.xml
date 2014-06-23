@@ -24,8 +24,19 @@ limitations under the License.
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-	<!-- RESTful web services use basic (not form) authentication. --> 
-	<http pattern="/rest/**" use-expressions="true">
+	<!-- External RESTful web services use basic (not form) authentication (<http-basic />).
+		They do not support sessions (create-session="stateless"). --> 
+	<http pattern="/rest/**" use-expressions="true" create-session="stateless">
+		<http-basic />
+		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+	</http>
+
+	<!-- AJAX RESTful web services are session-aware. They are configured for basic authentication,
+		but it is never used: users get authenticated when they request a web page (with the login form),
+		and all AJAX requests are pre-authenticated. The "entry-point-ref" attribute assigns a custom entry point
+		which is used to issue 401 response without the "WWW-Authenticate" header when a session expires.
+		This response is intercepted on the client-side and the user is redirected to the "Session Expired" page.-->
+	<http pattern="/ajax/**" use-expressions="true">
 		<http-basic entry-point-ref="restAuthenticationEntryPoint" />
 		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
 	</http>
