@@ -47,9 +47,9 @@ limitations under the License.
 
 		<form method="POST" action="j_spring_security_check">
 			<spring:message code="login_page_user_name" />:<br/>
-			<input name="j_username" type="text" class="field" /><br/>
+			<input id="j_username" name="j_username" type="text" class="field" /><br/>
 			<spring:message code="login_page_password" />:<br/>
-			<input name="j_password" type="password" class="field" /><br/>
+			<input id="j_password" name="j_password" type="password" class="field" /><br/>
 			<input type="submit" class="button" value="<spring:message code="login_page_submit_button" />" />
 			<input type="button" class="button" onclick="location.href='about'" value="<spring:message code="login_page_back_button" />" /><br/>
 		</form>
