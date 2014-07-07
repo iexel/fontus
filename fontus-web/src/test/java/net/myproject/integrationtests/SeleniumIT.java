@@ -28,7 +28,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class ProductsPageIT {
+/**
+ * This class contains Selenium GUI tests
+ */
+public class SeleniumIT {
 	private WebDriver driver;
 	private String baseUrl;
 
@@ -46,8 +49,8 @@ public class ProductsPageIT {
 	}
 
 	@Test
-	public void testMySelenium() throws Exception {
-		// the delay is for increased dramatic effect only :)
+	public void testProductsPage() throws Exception {
+		// the delay is for an increased dramatic effect only :)
 		int demoWaitTime = 2000;
 
 		driver.get(baseUrl + "/about");
