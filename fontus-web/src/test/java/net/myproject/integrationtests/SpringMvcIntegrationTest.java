@@ -100,7 +100,7 @@ public class SpringMvcIntegrationTest {
 		r.andDo(print());
 		r.andExpect(status().isOk());
 
-		// Update the new record
+		// Get the new record's id and timestamp with Jackson
 		MvcResult result = r.andReturn();
 		String resultStr = result.getResponse().getContentAsString();
 		ObjectMapper mapper = new ObjectMapper();
@@ -110,7 +110,7 @@ public class SpringMvcIntegrationTest {
 		JsonNode timestampNode = rootNode.path("timestamp");
 		String timestamp = timestampNode.asText();
 
-		// Get the new record's id and timestamp
+		// Update the new record
 		m = put("/rest/products/" + id);
 		m.contentType(MediaType.APPLICATION_JSON);
 		m.accept(MediaType.APPLICATION_JSON);
@@ -127,7 +127,7 @@ public class SpringMvcIntegrationTest {
 		r.andExpect(status().isOk());
 		r.andExpect(jsonPath("$.page", equalTo(1)));
 		// ?(@.id==8) - select all rows with id=8, and [0] - get the first of these rows
-		r.andExpect(jsonPath("$.rows[?(@.id==8)][0].name", equalTo("Updated by automated test")));
+		r.andExpect(jsonPath("$.rows[?(@.id==" + id + ")][0].name", equalTo("Updated by automated test")));
 
 		// Delete the test record
 		m = delete("/rest/products/" + id);
