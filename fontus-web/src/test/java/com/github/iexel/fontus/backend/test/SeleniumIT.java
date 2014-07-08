@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.myproject.integrationtests;
+package com.github.iexel.fontus.backend.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
