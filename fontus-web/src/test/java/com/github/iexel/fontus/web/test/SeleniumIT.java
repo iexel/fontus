@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.iexel.fontus.backend.test;
+package com.github.iexel.fontus.web.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
