@@ -43,7 +43,7 @@ limitations under the License.
 <h3>
 <a class="anchor" href="#building-the-project"><span class="octicon octicon-link"></span></a>Building the project</h3>
 
-<p>The application is a multi-module Maven project consisting of a parent and two child projects. Use <code>mvn clean package</code> to build it.</p>
+<p>The application is a multi-module Maven project which consists of a parent and two child projects. Use <code>mvn clean package</code> to build the project, or <code>mvn clean verify</code> to build the project and run the integration tests. FireFox should be installed on the build computer to run the integration tests.</p>
 
 <h3>
 <a class="anchor" href="#technologies-used-in-this-application"><span class="octicon octicon-link"></span></a>Technologies used in this application</h3>
@@ -51,7 +51,7 @@ limitations under the License.
 <h4>
 <a class="anchor" href="#short-list-of-technologies"><span class="octicon octicon-link"></span></a>Short list of technologies</h4>
 
-<p>Spring MVC, Java EE, RESTful Web Services, JSON, JSP, JSTL, HTML5, CSS3, jQuery, jQuery UI, JavaScript, AJAX, Tomcat, Maven</p>
+<p>Spring MVC, Java EE, RESTful Web Services, JSON, JSP, JSTL, HTML5, CSS3, jQuery, jQuery UI, JavaScript, AJAX, Tomcat, Maven, Selenium, Spring MVC Test Framework, JUnit, Mockito, Hamcrest.</p>
 
 <h4>
 <a class="anchor" href="#server-side-web-development-java-ee--spring-mvc-40"><span class="octicon octicon-link"></span></a>Server-side web development (Java EE &amp; Spring MVC 4.0)</h4>
@@ -113,7 +113,8 @@ limitations under the License.
 
 <p>The following third-party JavaScript libraries are used in the application: jQuery, jQuery UI, jqGrid, mmenu, and Layout Engine. The use of jQuery UI is limited; most of the HTML is manually coded, and styled with CSS.</p>
 
-<h4>Mobile phones and tablets</h4>
+<h4>
+<a class="anchor" href="#mobile-phones-and-tablets"><span class="octicon octicon-link"></span></a>Mobile phones and tablets</h4>
 
 <p>The application has a fluid and responsive HTML layout which adapts well to mobile phone and tablet screens. The responsiveness is implemented using CSS media queries. A separate compact mobile menu is used on narrow screens.</p>
 
@@ -125,7 +126,7 @@ limitations under the License.
 <h4>
 <a class="anchor" href="#web-server"><span class="octicon octicon-link"></span></a>Web server</h4>
 
-<p>The application has been tested tested in Tomcat 7. It should work in any other servlet container/Java EE server.</p>
+<p>The application has been tested in Tomcat 7. It should work in any other servlet container/Java EE server.</p>
 
 <h4>
 <a class="anchor" href="#db"><span class="octicon octicon-link"></span></a>DB</h4>
@@ -137,16 +138,26 @@ limitations under the License.
 
 <p>Desktop browsers: the current version and the second last version of FireFox, Chrome and Opera; Safari 5.0+, IE 9+</p>
 
-<p>Mobile browsers: Android Browser (AOSP) 2.3+, Chrome for Mobile</p>
+<p>Mobile browsers: Android Browser (AOSP) 2.3+, Chrome for Mobile; it looks good in Mobile Safari too</p>
 
 <h4>
+<a class="anchor" href="#regression-testing"><span class="octicon octicon-link"></span></a>Regression testing</h4>
+
+<p>The project employs the following tests:</p>
+
+<ul class="task-list">
+<li>GUI integration tests (Selenium, JUnit, Hamcrest)</li>
+<li>Integration tests for the RESTful web service (JUnit, Hamcrest, JasonPath, Spring MVC Test Framework)</li>
+<li>Unit tests for the backend/business logic (JUnit, Mockito, Hamcrest)</li>
+<li>Unit tests for Spring MVC controllers - web pages and the RESTful web service (JUnit, Mockito, Hamcrest, Spring MVC Test Framework)</li>
+</ul><h4>
 <a class="anchor" href="#import-to-eclipse"><span class="octicon octicon-link"></span></a>Import to Eclipse</h4>
 
 <p>After importing the three Maven projects to Eclipse:</p>
 
 <ul class="task-list">
 <li>Change the encoding to <code>UTF-8</code> in the properties of localisation files (<code>messages_ru.properties</code> and <code>messages.properties</code>). Spring MVC is configured to read these files in <code>UTF-8</code>.</li>
-<li>Exclude the content of the <code>fontus-web/src/main/webapp/resources/js/libs/</code> directory from JavaScript validation (third-party libraries tend to produce validation warnings). In the <code>fontus-web</code> project properties select <code>JavaScript</code> &gt; <code>Include Path</code>, click the <code>Source</code> tab, select the <code>Excluded</code> node, press <code>Edit...</code> button, and add the directory into the <code>Exclussion patterns</code> section.</li>
+<li>Exclude the content of the <code>fontus-web/src/main/webapp/resources/js/libs/</code> directory from JavaScript validation (third-party libraries tend to produce validation warnings). In the <code>fontus-web</code> project properties select <code>JavaScript</code> &gt; <code>Include Path</code>, click the <code>Source</code> tab, select the <code>Excluded</code> node, press <code>Edit...</code> button, and add the directory into the <code>Exclusion patterns</code> section.</li>
 </ul>
 
 </div>
