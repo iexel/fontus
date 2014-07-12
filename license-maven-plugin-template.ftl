@@ -16,21 +16,21 @@ limitations under the License.
 
 
 <#--
-This file is a freemaker template which is used by the License Maven Plugin to generate the
+This file is a Freemaker template which is used by the License Maven Plugin to generate the
 list of third-party libraries and their licenses. This list is used in the documentation
 after some manual enhancement.
 
-Example Usage:
+Usage:
 cd <the root directory of the Maven parent project>
-mvn license:aggregate-add-third-party -Dlicense.fileTemplate="./license-maven-plugin-template.ftl"
+mvn clean install
+mvn license:aggregate-add-third-party -Dlicense.fileTemplate="./license-maven-plugin-template.ftl" -Dlicense.excludedScopes="system,test"
 
-If the license.fileTemplate parameter is omitted, the default template will be used instead.
+`mvn clean install` is necessary as the plugin gets information on dependencies from the local Maven repository.
+There will be an error if project's own artifacts are not installed in the local repository.
 
-The output (list of artifacts and their licenses) can be found in target/generated-sources/license/THIRD-PARTY.txt.
+If the `license.fileTemplate` parameter is omitted, the default template will be used instead.
 
-Comment out all references to this project's own artifacts in all child POMs before using the plugin
-as the plugin cannot handle them for some reason. Excluding these artifacts with plugin parameters
-does not work for some reason.
+The output (list of artifacts and their licenses) can be found in `target/generated-sources/license/THIRD-PARTY.txt`.
 -->
 
 The project uses ${dependencyMap?size} Maven artifacts:
