@@ -8,7 +8,7 @@ Some libraries and images were released with more than one license by their copy
 
 Most Java libraries are not distributed with the source code version of this project. They are downloaded by Maven at build time. However, they are a part of the distribution when a binary version of this project (a `.war` file) is distributed.
 
-This document does not cover libraries used in automated tests (Maven `test` scope) only. These libraries are downloaded by Maven and used at build time only. The test libraries and their dependencies are too plentiful to give them a proper coverage here.
+This document does not cover libraries used in automated tests only (Maven `test` scope). These libraries are downloaded by Maven and used only at build time. The test libraries and their dependencies are too plentiful to give them a proper coverage here.
 
 ###Source code
 
@@ -217,7 +217,7 @@ The `img` directory that contains all images used in the project has a `source_i
 
 ###Maven dependencies 
 
-This section lists Maven artifacts (Java libraries) referenced in the project. Some artifacts may in turn include third-party Java libraries. See individual artifact licenses for details. 
+This section lists Maven artifacts (Java libraries) used in the project (this document does not cover libraries used in automated tests only - Maven `test` scope). Some artifacts may in turn include third-party Java libraries. See individual artifact licenses for details. 
 
 
 The project uses following Maven artifacts: 
