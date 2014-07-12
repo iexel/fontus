@@ -22,13 +22,13 @@ This project is released under the [Apache Software License, Version 2.0](https:
 
 ###Building the project
 
-The application is a multi-module Maven project consisting of a parent and two child projects. Use `mvn clean package` to build it.
+The application is a multi-module Maven project which consists of a parent and two child projects. Use `mvn clean package` to build the project, or `mvn clean verify` to build the project and run the integration tests. FireFox should be installed on the build computer to run the integration tests.
 
 ###Technologies used in this application
 
 ####Short list of technologies
 
-Spring MVC, Java EE, RESTful Web Services, JSON, JSP, JSTL, HTML5, CSS3, jQuery, jQuery UI, JavaScript, AJAX, Tomcat, Maven
+Spring MVC, Java EE, RESTful Web Services, JSON, JSP, JSTL, HTML5, CSS3, jQuery, jQuery UI, JavaScript, AJAX, Tomcat, Maven, Selenium, Spring MVC Test Framework, JUnit, Mockito, Hamcrest.
 
 ####Server-side web development (Java EE & Spring MVC 4.0)
 
@@ -89,7 +89,7 @@ The application uses slf4j API with log4j implementation for logging.
 
 ####Web server
 
-The application has been tested tested in Tomcat 7. It should work in any other servlet container/Java EE server.
+The application has been tested in Tomcat 7. It should work in any other servlet container/Java EE server.
 
 ####DB
 
@@ -99,10 +99,18 @@ In-memory dummy service is used instead of a DB.
 
 Desktop browsers: the current version and the second last version of FireFox, Chrome and Opera; Safari 5.0+, IE 9+
 
-Mobile browsers: Android Browser (AOSP) 2.3+, Chrome for Mobile
+Mobile browsers: Android Browser (AOSP) 2.3+, Chrome for Mobile; it looks good in Mobile Safari too
+
+####Regression testing
+
+The project employs the following tests:
+ - GUI integration tests (Selenium, JUnit, Hamcrest)
+ - Integration tests for the RESTful web service (JUnit, Hamcrest, JasonPath, Spring MVC Test Framework)
+ - Unit tests for the backend/business logic (JUnit, Mockito, Hamcrest)
+ - Unit tests for Spring MVC controllers - web pages and the RESTful web service (JUnit, Mockito, Hamcrest, Spring MVC Test Framework)
 
 ####Import to Eclipse
 
 After importing the three Maven projects to Eclipse:
  - Change the encoding to `UTF-8` in the properties of localisation files (`messages_ru.properties` and `messages.properties`). Spring MVC is configured to read these files in `UTF-8`.
- - Exclude the content of the `fontus-web/src/main/webapp/resources/js/libs/` directory from JavaScript validation (third-party libraries tend to produce validation warnings). In the `fontus-web` project properties select `JavaScript` > `Include Path`, click the `Source` tab, select the `Excluded` node, press `Edit...` button, and add the directory into the `Exclussion patterns` section.
+ - Exclude the content of the `fontus-web/src/main/webapp/resources/js/libs/` directory from JavaScript validation (third-party libraries tend to produce validation warnings). In the `fontus-web` project properties select `JavaScript` > `Include Path`, click the `Source` tab, select the `Excluded` node, press `Edit...` button, and add the directory into the `Exclusion patterns` section.
