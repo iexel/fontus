@@ -217,10 +217,10 @@ The `img` directory that contains all images used in the project has a `source_i
 
 ###Maven dependencies 
 
-This section lists Maven artifacts (Java libraries) used in the project (this document does not cover libraries used in automated tests only - Maven `test` scope). Some artifacts may in turn include third-party Java libraries. See individual artifact licenses for details. 
+This section lists Maven artifacts (Java libraries) used in the project (this document does not cover libraries used in automated tests only). Some artifacts may in turn include third-party Java libraries. See individual artifact licenses for details. 
 
 
-The project uses following Maven artifacts: 
+This project uses the following Maven artifacts: 
 
 ####AOP alliance 
 **Maven artifact:**  groupId: aopalliance,  artifactId: aopalliance,  version: 1.0<br> 
