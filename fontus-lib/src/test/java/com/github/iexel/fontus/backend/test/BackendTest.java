@@ -35,7 +35,7 @@ import org.junit.Test;
 public class BackendTest {
 
 	@Test
-	public void testProductsPage() throws Exception {
+	public void testProductsService() throws Exception {
 		String updatedRecordName = "Updated by automated test - 1";
 		ProductsService productsService = new ProductsService();
 		Product product;

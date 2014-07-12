@@ -49,8 +49,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * This class contains integration tests that use Spring MVC Test Framework. The framework emulates HTTP requests (without doing them - inside Java VM). The tests do not require deploying the
  * application to Tomcat, thus they are executed in Maven's "test" phase and not in "integration-test".
  */
+// SpringJUnit4ClassRunner extends a JUnit's class and allows loading spring context
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
+// This section has to be used with SpringJUnit4ClassRunner. It provides the path to the Spring configuration.
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring-mvc-servlet.xml")
 public class SpringMvcIntegrationTest {
 

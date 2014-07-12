@@ -24,6 +24,16 @@ public class GridResponse<T> {
 	protected int pageSize;
 	protected int totalRowCount;
 
+	public GridResponse() {
+	}
+
+	public GridResponse(int pageNumber, int pageSize, int totalRowCount, List<T> rows) {
+		this.rows = rows;
+		this.pageNumber = pageNumber;
+		this.pageSize = pageSize;
+		this.totalRowCount = totalRowCount;
+	}
+
 	public List<T> getRows() {
 		return rows;
 	}
