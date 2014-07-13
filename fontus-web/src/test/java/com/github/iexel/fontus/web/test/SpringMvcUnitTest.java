@@ -74,7 +74,7 @@ public class SpringMvcUnitTest {
 	}
 
 	@Test
-	public void testGet() throws Exception {
+	public void shouldGet() throws Exception {
 
 		GridResponse<Product> gridResponse = new GridResponse<Product>(1, 100, 15, null);
 		// Stub a service method. The stub responds to any input GridRequest object as
@@ -100,7 +100,7 @@ public class SpringMvcUnitTest {
 	}
 
 	@Test
-	public void testPost() throws Exception {
+	public void shouldCreate() throws Exception {
 
 		GridRowResponse gridRowResponse = new GridRowResponse(3, 1235);
 		when(productService.createProduct(any(Product.class))).thenReturn(gridRowResponse);
@@ -120,7 +120,7 @@ public class SpringMvcUnitTest {
 	}
 
 	@Test
-	public void testPut() throws Exception {
+	public void shouldUpdate() throws Exception {
 
 		GridRowResponse gridRowResponse = new GridRowResponse(3, 1235);
 		when(productService.updateProduct(any(Product.class))).thenReturn(gridRowResponse);
@@ -140,7 +140,7 @@ public class SpringMvcUnitTest {
 	}
 
 	@Test
-	public void testDelete() throws Exception {
+	public void shouldDelete() throws Exception {
 
 		MockHttpServletRequestBuilder m = delete("/rest/products/3");
 		m.accept(MediaType.APPLICATION_JSON);
