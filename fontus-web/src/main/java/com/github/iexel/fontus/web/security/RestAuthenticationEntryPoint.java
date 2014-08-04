@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.myproject.security;
+package com.github.iexel.fontus.web.security;
 
 import java.io.IOException;
 

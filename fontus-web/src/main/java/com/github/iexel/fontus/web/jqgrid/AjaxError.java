@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.myproject.jqgrid;
+package com.github.iexel.fontus.web.jqgrid;
 
 public class AjaxError {
 	private String globalErrorCode;

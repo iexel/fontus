@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package net.myproject.jqgrid;
+package com.github.iexel.fontus.web.jqgrid;
 
 import java.util.List;
 
-import net.myproject.services.GridResponse;
+import com.github.iexel.fontus.services.GridResponse;
 
 public class JqGridResponse<T> {
 

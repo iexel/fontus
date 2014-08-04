@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.myproject.services;
+package com.github.iexel.fontus.services;
 
 import java.util.List;
 

@@ -30,13 +30,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import java.math.BigDecimal;
 
-import net.myproject.rest.ProductsController;
-import net.myproject.services.GridRequest;
-import net.myproject.services.GridResponse;
-import net.myproject.services.GridRowResponse;
-import net.myproject.services.Product;
-import net.myproject.services.ProductsService;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -47,6 +40,13 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.github.iexel.fontus.services.GridRequest;
+import com.github.iexel.fontus.services.GridResponse;
+import com.github.iexel.fontus.services.GridRowResponse;
+import com.github.iexel.fontus.services.Product;
+import com.github.iexel.fontus.services.ProductsService;
+import com.github.iexel.fontus.web.rest.ProductsController;
 
 /**
  * This class contains unit tests that use Spring MVC Test Framework. It tests Spring MVC controllers. The framework emulates HTTP requests. This project also uses Spring MVC Test Framework tests that

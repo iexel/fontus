@@ -14,12 +14,10 @@
  * limitations under the License.
  */
 
-package net.myproject.mvc;
+package com.github.iexel.fontus.web.mvc;
 
 import java.security.Principal;
 import java.util.Locale;
-
-import net.myproject.jqgrid.AjaxError;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
@@ -28,7 +26,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ControllerAdvice("net.myproject.mvc")
+import com.github.iexel.fontus.web.jqgrid.AjaxError;
+
+@ControllerAdvice("com.github.iexel.fontus.web.mvc")
 public class GlobalControllerAdviceMvc {
 
 	@ModelAttribute

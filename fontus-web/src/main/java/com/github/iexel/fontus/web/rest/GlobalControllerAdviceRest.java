@@ -14,13 +14,10 @@
  * limitations under the License.
  */
 
-package net.myproject.rest;
+package com.github.iexel.fontus.web.rest;
 
 import java.util.List;
 import java.util.Locale;
-
-import net.myproject.jqgrid.AjaxError;
-import net.myproject.services.ServiceException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -33,7 +30,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ControllerAdvice("net.myproject.rest")
+import com.github.iexel.fontus.services.ServiceException;
+import com.github.iexel.fontus.web.jqgrid.AjaxError;
+
+@ControllerAdvice("com.github.iexel.fontus.web.rest")
 public class GlobalControllerAdviceRest {
 
 	@Autowired

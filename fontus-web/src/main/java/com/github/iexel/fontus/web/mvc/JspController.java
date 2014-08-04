@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.myproject.mvc;
+package com.github.iexel.fontus.web.mvc;
 
 import javax.servlet.http.HttpServletResponse;
 

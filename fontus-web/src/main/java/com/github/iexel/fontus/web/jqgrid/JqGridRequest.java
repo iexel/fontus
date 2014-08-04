@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package net.myproject.jqgrid;
+package com.github.iexel.fontus.web.jqgrid;
 
-import net.myproject.services.GridRequest;
+import com.github.iexel.fontus.services.GridRequest;
 
 public class JqGridRequest {
 	protected int page;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.iexel.fontus.backend.test;
+package com.github.iexel.fontus.services.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -24,13 +24,13 @@ import static org.junit.Assert.fail;
 import java.math.BigDecimal;
 import java.util.List;
 
-import net.myproject.services.GridRequest;
-import net.myproject.services.GridResponse;
-import net.myproject.services.GridRowResponse;
-import net.myproject.services.Product;
-import net.myproject.services.ProductsService;
-
 import org.junit.Test;
+
+import com.github.iexel.fontus.services.GridRequest;
+import com.github.iexel.fontus.services.GridResponse;
+import com.github.iexel.fontus.services.GridRowResponse;
+import com.github.iexel.fontus.services.Product;
+import com.github.iexel.fontus.services.ProductsService;
 
 public class BackendTest {
 

@@ -60,8 +60,8 @@ limitations under the License.
 		<authentication-provider ref="customAuthenticationProvider" />
 	</authentication-manager>
 
-	<beans:bean name="customAuthenticationProvider" class="net.myproject.security.CustomAuthenticationProvider" />
-	<beans:bean name="restAuthenticationEntryPoint" class="net.myproject.security.RestAuthenticationEntryPoint">
+	<beans:bean name="customAuthenticationProvider" class="com.github.iexel.fontus.web.security.CustomAuthenticationProvider" />
+	<beans:bean name="restAuthenticationEntryPoint" class="com.github.iexel.fontus.web.security.RestAuthenticationEntryPoint">
 		<beans:property name="realmName" value="AJAX realm" />
 	</beans:bean>	
 

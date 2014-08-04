@@ -14,17 +14,9 @@
  * limitations under the License.
  */
 
-package net.myproject.rest;
+package com.github.iexel.fontus.web.rest;
 
 import javax.validation.Valid;
-
-import net.myproject.jqgrid.JqGridRequest;
-import net.myproject.jqgrid.JqGridResponse;
-import net.myproject.services.GridResponse;
-import net.myproject.services.GridRowResponse;
-import net.myproject.services.Product;
-import net.myproject.services.ProductsService;
-import net.myproject.services.ServiceException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,6 +24,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.github.iexel.fontus.services.GridResponse;
+import com.github.iexel.fontus.services.GridRowResponse;
+import com.github.iexel.fontus.services.Product;
+import com.github.iexel.fontus.services.ProductsService;
+import com.github.iexel.fontus.services.ServiceException;
+import com.github.iexel.fontus.web.jqgrid.JqGridRequest;
+import com.github.iexel.fontus.web.jqgrid.JqGridResponse;
 
 @RestController
 public class ProductsController {
