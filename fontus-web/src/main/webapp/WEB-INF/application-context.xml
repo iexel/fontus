@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright 2014 iexel
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd">
+
+	<beans profile="default">
+		<!--		
+		<bean id="dataSource" class="org.apache.tomcat.dbcp.dbcp.BasicDataSource">
+			<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+			<property name="url" value="jdbc:mysql://localhost:3306/FONTUS?useUnicode=yes&amp;characterEncoding=UTF-8" />
+			<property name="username" value="fontus" />
+			<property name="password" value="" />
+		</bean>
+		-->
+
+		<jee:jndi-lookup id="dataSource" jndi-name="jdbc/FONTUS" expected-type="javax.sql.DataSource" />
+
+		<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+			<property name="dataSource" ref="dataSource" />
+			<property name="packagesToScan" value="com.github.iexel.fontus.services" />
+			<property name="jpaVendorAdapter">
+				<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+			</property>
+			<property name="jpaProperties">
+				<props>
+					<prop key="hibernate.hbm2ddl.auto">create</prop>
+					<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+					<prop key="hibernate.show_sql">true</prop>
+				</props>
+			</property>
+		</bean>
+	</beans>
+
+	<beans profile="testSpringProfile">
+
+		<jdbc:embedded-database id="dataSource" />
+		
+		<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+			<property name="dataSource" ref="dataSource" />
+			<property name="packagesToScan" value="com.github.iexel.fontus.services" />
+			<property name="jpaVendorAdapter">
+				<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+			</property>
+			<property name="jpaProperties">
+				<props>
+					<prop key="hibernate.hbm2ddl.auto">create</prop> <!--update-->
+					<prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+					<prop key="hibernate.show_sql">true</prop>
+				</props>
+			</property>
+		</bean>
+	</beans>
+
+	<beans>
+		<context:component-scan base-package="com.github.iexel.fontus.services" />
+	
+		<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+			<property name="entityManagerFactory" ref="entityManagerFactory" />
+		</bean>
+	
+		<bean id="persistenceExceptionTranslationPostProcessor" class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+		
+		<tx:annotation-driven />
+	</beans>
+</beans>

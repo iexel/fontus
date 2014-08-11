@@ -14,14 +14,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>net.myproject</groupId>
+		<groupId>com.github.iexel.fontus</groupId>
 		<artifactId>fontus-solution</artifactId>
 		<version>0.0.3-SNAPSHOT</version>
 	</parent>
@@ -42,7 +41,7 @@ limitations under the License.
 		<!-- Internal libraries -->
 
 		<dependency>
-			<groupId>net.myproject</groupId>
+			<groupId>com.github.iexel.fontus</groupId>
 			<artifactId>fontus-lib</artifactId>
 		</dependency>
 
@@ -110,6 +109,10 @@ limitations under the License.
 			<artifactId>mockito-core</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+		</dependency>
 
 		<!-- Spring MVC and Spring Security -->
 
@@ -141,6 +144,14 @@ limitations under the License.
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
+		</dependency>
+
+		<!-- DB access -->
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 
 		<!-- slf4j / log4j (runtime implementations) -->

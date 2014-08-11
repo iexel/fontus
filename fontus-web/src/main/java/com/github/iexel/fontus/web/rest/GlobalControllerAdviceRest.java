@@ -19,6 +19,8 @@ package com.github.iexel.fontus.web.rest;
 import java.util.List;
 import java.util.Locale;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
@@ -35,6 +37,8 @@ import com.github.iexel.fontus.web.jqgrid.AjaxError;
 
 @ControllerAdvice("com.github.iexel.fontus.web.rest")
 public class GlobalControllerAdviceRest {
+
+	private final Logger logger = LoggerFactory.getLogger(GlobalControllerAdviceRest.class);
 
 	@Autowired
 	private MessageSource messageSource;
@@ -56,6 +60,8 @@ public class GlobalControllerAdviceRest {
 	@ExceptionHandler(ServiceException.class)
 	public AjaxError handle(ServiceException ex, Locale locale) {
 
+		logger.error(null, ex);
+		ex.printStackTrace();
 		AjaxError ajaxError = new AjaxError();
 		ajaxError.setLocalErrorMessage(fetchErrorMessage(ex.getErrorCode().toString(), locale));
 		return ajaxError;
@@ -66,6 +72,7 @@ public class GlobalControllerAdviceRest {
 	@ExceptionHandler(Throwable.class)
 	public AjaxError handle(Throwable ex) {
 
+		logger.error(null, ex);
 		AjaxError ajaxError = new AjaxError();
 		ajaxError.setGlobalErrorCode("error_unexpected");
 		return ajaxError;

@@ -16,31 +16,15 @@
 
 package com.github.iexel.fontus.services;
 
-public class GridRowResponse {
-	protected int id;
-	protected long version;
+public interface IProductsService {
 
-	public GridRowResponse() {
-	}
+	GridResponse<Product> getProducts(GridRequest dRequest) throws ServiceException;
 
-	public GridRowResponse(int id, long version) {
-		this.id = id;
-		this.version = version;
-	}
+	Product getProduct(int productId) throws ServiceException;
 
-	public int getId() {
-		return id;
-	}
+	GridRowResponse createProduct(Product product) throws ServiceException;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+	GridRowResponse updateProduct(Product product) throws ServiceException;
 
-	public long getVersion() {
-		return version;
-	}
-
-	public void setVersion(long version) {
-		this.version = version;
-	}
+	void deleteProduct(int productId, int productVersion) throws ServiceException;
 }

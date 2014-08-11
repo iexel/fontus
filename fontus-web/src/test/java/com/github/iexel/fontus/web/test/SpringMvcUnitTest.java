@@ -44,13 +44,12 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import com.github.iexel.fontus.services.GridRequest;
 import com.github.iexel.fontus.services.GridResponse;
 import com.github.iexel.fontus.services.GridRowResponse;
+import com.github.iexel.fontus.services.IProductsService;
 import com.github.iexel.fontus.services.Product;
-import com.github.iexel.fontus.services.ProductsService;
 import com.github.iexel.fontus.web.rest.ProductsController;
 
 /**
- * This class contains unit tests that use Spring MVC Test Framework. It tests Spring MVC controllers. The framework emulates HTTP requests. This project also uses Spring MVC Test Framework tests that
- * load the complete Spring configuration; those tests do not use mocking, and they are integration tests in nature.
+ * This class contains unit tests that use Spring MVC Test Framework. It tests Spring MVC controllers (with no underlying logic).
  */
 
 public class SpringMvcUnitTest {
@@ -59,7 +58,7 @@ public class SpringMvcUnitTest {
 
 	// An equivalent of mock() method; should be used with initMocks(this) only.
 	@Mock
-	private ProductsService productService;
+	private IProductsService productsService;
 
 	// @InjectMocks - injects mock or spy fields into tested object automatically.
 	@InjectMocks
@@ -80,9 +79,9 @@ public class SpringMvcUnitTest {
 		// Stub a service method. The stub responds to any input GridRequest object as
 		// incorrect input data should not generate any exception. This allows to verify
 		// the call later and to generate a sensible error message.
-		when(productService.getProducts(any(GridRequest.class))).thenReturn(gridResponse);
+		when(productsService.getProducts(any(GridRequest.class))).thenReturn(gridResponse);
 		// To create a stub for particular input data use:
-		// when(productService.getProducts(product)).thenReturn(gridResponse);
+		// when(productsService.getProducts(product)).thenReturn(gridResponse);
 
 		// Emulate HTTP request
 		MockHttpServletRequestBuilder m = get("/rest/products?rows=100&page=1&sidx=id&sord=asc");
@@ -91,7 +90,7 @@ public class SpringMvcUnitTest {
 
 		// Verify the method call to make sure HTTP request has been correctly interpreted.
 		GridRequest gridRequest = new GridRequest(1, 100, "id", false, null, null, null);
-		verify(productService).getProducts(gridRequest);
+		verify(productsService).getProducts(gridRequest);
 
 		// Print and verify the controller's response.
 		r.andDo(print());
@@ -103,16 +102,16 @@ public class SpringMvcUnitTest {
 	public void shouldCreate() throws Exception {
 
 		GridRowResponse gridRowResponse = new GridRowResponse(3, 1235);
-		when(productService.createProduct(any(Product.class))).thenReturn(gridRowResponse);
+		when(productsService.createProduct(any(Product.class))).thenReturn(gridRowResponse);
 
 		MockHttpServletRequestBuilder m = post("/rest/products");
 		m.contentType(MediaType.APPLICATION_JSON);
 		m.accept(MediaType.APPLICATION_JSON);
-		m.content("{\"name\":\"Test product\", \"price\":10.00, \"timestamp\":1234}");
+		m.content("{\"name\":\"Test product\", \"price\":10.00, \"version\":1234}");
 		ResultActions r = this.mockMvc.perform(m);
 
 		Product product = new Product(0, "Test product", new BigDecimal("10.00"), 1234);
-		verify(productService).createProduct(product);
+		verify(productsService).createProduct(product);
 
 		r.andDo(print());
 		r.andExpect(status().isOk());
@@ -123,16 +122,16 @@ public class SpringMvcUnitTest {
 	public void shouldUpdate() throws Exception {
 
 		GridRowResponse gridRowResponse = new GridRowResponse(3, 1235);
-		when(productService.updateProduct(any(Product.class))).thenReturn(gridRowResponse);
+		when(productsService.updateProduct(any(Product.class))).thenReturn(gridRowResponse);
 
 		MockHttpServletRequestBuilder m = put("/rest/products/3");
 		m.contentType(MediaType.APPLICATION_JSON);
 		m.accept(MediaType.APPLICATION_JSON);
-		m.content("{\"name\":\"Test product\", \"price\":10.00, \"timestamp\":1234}");
+		m.content("{\"name\":\"Test product\", \"price\":10.00, \"version\":1234}");
 		ResultActions r = this.mockMvc.perform(m);
 
 		Product product = new Product(3, "Test product", new BigDecimal("10.00"), 1234);
-		verify(productService).updateProduct(product);
+		verify(productsService).updateProduct(product);
 
 		r.andDo(print());
 		r.andExpect(status().isOk());
@@ -143,11 +142,13 @@ public class SpringMvcUnitTest {
 	public void shouldDelete() throws Exception {
 
 		MockHttpServletRequestBuilder m = delete("/rest/products/3");
+		m.contentType(MediaType.APPLICATION_JSON);
 		m.accept(MediaType.APPLICATION_JSON);
+		m.content("{\"version\":0}");
 		ResultActions r = this.mockMvc.perform(m);
 		r.andDo(print());
 		r.andExpect(status().isOk());
 
-		verify(productService).deleteProduct(3);
+		verify(productsService).deleteProduct(3, 0);
 	}
 }

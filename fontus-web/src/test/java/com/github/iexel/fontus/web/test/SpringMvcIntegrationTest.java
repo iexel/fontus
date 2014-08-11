@@ -32,7 +32,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.ContextHierarchy;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -46,14 +48,17 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * This class contains integration tests that use Spring MVC Test Framework. The framework emulates HTTP requests (without doing them - inside Java VM). The tests do not require deploying the
- * application to Tomcat, thus they are executed in Maven's "test" phase and not in "integration-test".
+ * This class contains integration tests that use Spring MVC Test Framework. These tests do not require deploying the application to Tomcat, thus they are executed in Maven's `test` phase (not in
+ * `integration-test`).
  */
 // SpringJUnit4ClassRunner extends a JUnit's class and allows loading spring context
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-// This section has to be used with SpringJUnit4ClassRunner. It provides the path to the Spring configuration.
-@ContextConfiguration("file:src/main/webapp/WEB-INF/spring-mvc-servlet.xml")
+// The @ContextHierarchy and @ContextConfiguration annotations are used with SpringJUnit4ClassRunner. They provide the paths
+// to the Spring XML configuration files. The Spring Security XML configuration can be added here, but it does not change anything.
+@ContextHierarchy({ @ContextConfiguration("file:src/main/webapp/WEB-INF/application-context.xml"), @ContextConfiguration("file:src/main/webapp/WEB-INF/spring-mvc-servlet.xml") })
+// Use the profile intended for integration tests.
+@ActiveProfiles("testSpringProfile")
 public class SpringMvcIntegrationTest {
 
 	private MockMvc mockMvc;
@@ -97,26 +102,26 @@ public class SpringMvcIntegrationTest {
 		m = post("/rest/products");
 		m.contentType(MediaType.APPLICATION_JSON);
 		m.accept(MediaType.APPLICATION_JSON);
-		m.content("{\"name\":\"A record created by automated test\", \"price\":10.00, \"timestamp\":0}");
+		m.content("{\"name\":\"A record created by automated test\", \"price\":10.00, \"version\":0}");
 		r = this.mockMvc.perform(m);
 		r.andDo(print());
 		r.andExpect(status().isOk());
 
-		// Get the new record's id and timestamp with Jackson
+		// Get the new record's id and version with Jackson
 		MvcResult result = r.andReturn();
 		String resultStr = result.getResponse().getContentAsString();
 		ObjectMapper mapper = new ObjectMapper();
 		JsonNode rootNode = mapper.readTree(resultStr);
 		JsonNode nameNode = rootNode.path("id");
 		int id = nameNode.asInt();
-		JsonNode timestampNode = rootNode.path("timestamp");
-		String timestamp = timestampNode.asText();
+		JsonNode versionNode = rootNode.path("version");
+		String version = versionNode.asText();
 
 		// Update the new record
 		m = put("/rest/products/" + id);
 		m.contentType(MediaType.APPLICATION_JSON);
 		m.accept(MediaType.APPLICATION_JSON);
-		m.content("{\"name\":\"Updated by automated test\", \"price\":20.00, \"timestamp\":" + timestamp + "}");
+		m.content("{\"name\":\"Updated by automated test\", \"price\":20.00, \"version\":" + version + "}");
 		r = this.mockMvc.perform(m);
 		r.andDo(print());
 		r.andExpect(status().isOk());
@@ -133,7 +138,9 @@ public class SpringMvcIntegrationTest {
 
 		// Delete the test record
 		m = delete("/rest/products/" + id);
+		m.contentType(MediaType.APPLICATION_JSON);
 		m.accept(MediaType.APPLICATION_JSON);
+		m.content("{\"version\":1}"); // the version after the update should be 1
 		r = this.mockMvc.perform(m);
 		r.andDo(print());
 		r.andExpect(status().isOk());

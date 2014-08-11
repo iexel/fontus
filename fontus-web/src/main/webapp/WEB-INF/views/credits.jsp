@@ -21,25 +21,7 @@ limitations under the License.
 
 <t:master-page selectedMainMenuItemCode="${selectedMainMenuItemCode}" selectedLeftMenuItemCode="${selectedLeftMenuItemCode}" locale="${springMvcLocale}">
 
-<script>
-// resizing code blocks
-$(document).ready(function() {
-	$(window).resize(resizeCodeBlocks);
-	resizeCodeBlocks();
-});
-
-function resizeCodeBlocks() {
-
-	var width = $(window).width();
-	var isLeftPanelDisplay = $(".b-left-panel").css("display");
-	
-	if(isLeftPanelDisplay == "none") {
-		$(".b-text-content").width(width - 45);
-	} else {
-		$(".b-text-content").width(width - 380);
-	}
-}
-</script>
+<script src="resources/js/text-page.js"></script>
 
 <div class=b-text-content>
 

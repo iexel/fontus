@@ -16,102 +16,62 @@
 
 package com.github.iexel.fontus.services;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.OptimisticLockException;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-public class ProductsService {
+public class ProductsService implements IProductsService {
 
-	protected int nextId = 8;
-	protected List<Product> products = new ArrayList<Product>();
+	@PersistenceContext
+	EntityManager entityManager;
 
-	public ProductsService() {
-		products.add(new Product(1, "Java SE (book)", new BigDecimal("40.50")));
-		products.add(new Product(2, "Spring MVC (book)", new BigDecimal("52.00")));
-		products.add(new Product(3, "Oracle (book)", new BigDecimal("31.20")));
-		products.add(new Product(4, "SQL (book)", new BigDecimal("45.50")));
-		products.add(new Product(5, "Spring (book)", new BigDecimal("51.00")));
-		products.add(new Product(6, "PHP (book)", new BigDecimal("33.20")));
-		products.add(new Product(7, "HTML (book)", new BigDecimal("41.50")));
-	}
-
-	private synchronized int nextId() {
-		return nextId++;
-	}
-
+	@Override
+	@Transactional(rollbackFor = Throwable.class)
 	public GridResponse<Product> getProducts(GridRequest dRequest) throws ServiceException {
-
-		GridResponse<Product> dResponse = new GridResponse<Product>();
-		dResponse.setPageSize(dRequest.getPageSize());
-		dResponse.setTotalRowCount(products.size());
-
-		// if there are no items in the list, return an empty response object:
-		if (products.size() == 0) {
-			dResponse.setPageNumber(1);
-			return dResponse;
-		}
-
-		dResponse.setPageNumber(dRequest.getPageNumber());
-
-		int startIndex = (dResponse.getPageNumber() - 1) * dResponse.getPageSize();
-		// the start index should not be beyond the last item in the grid:
-		while (startIndex >= dResponse.getTotalRowCount() && startIndex > 0) {
-			startIndex -= dResponse.getPageSize();
-			dResponse.setPageNumber(dResponse.getPageNumber() - 1);
-		}
-
-		// the end index should not be beyond the last item in the grid:
-		int endIndex = startIndex + dResponse.getPageSize();
-		endIndex = endIndex > products.size() ? products.size() : endIndex;
-
-		dResponse.setRows(products.subList(startIndex, endIndex));
-		return dResponse;
+		SelectQueryBuilder<Product> selectQueryBuilder = new SelectQueryBuilder<Product>(Product.class, entityManager);
+		return selectQueryBuilder.getRecords(dRequest);
 	}
 
+	@Override
+	@Transactional(rollbackFor = Throwable.class)
 	public Product getProduct(int productId) throws ServiceException {
-		for (Product product : products) {
-			if (product.getId() == productId) {
-				return product;
-			}
-		}
 		return null;
 	}
 
+	@Override
+	@Transactional(rollbackFor = Throwable.class)
 	public GridRowResponse createProduct(Product product) throws ServiceException {
-		product.setId(nextId());
-		product.setTimestamp((new Date()).getTime());
-		products.add(product);
-		return new GridRowResponse(product.getId(), product.getTimestamp());
+		entityManager.persist(product);
+		return new GridRowResponse(product.getId(), product.getVersion());
 	}
 
+	@Override
+	@Transactional(rollbackFor = Throwable.class)
 	public GridRowResponse updateProduct(Product product) throws ServiceException {
-		for (int i = 0; i < products.size(); i++) {
-			if (products.get(i).getId() == product.getId()) {
-
-				if (products.get(i).getTimestamp() != product.getTimestamp()) {
-					throw new ServiceException(ServiceException.ErrorCode.EXCEPTION_MODIFIED_BY_ANOTHER_USER);
-				}
-
-				product.setTimestamp((new Date()).getTime());
-				products.set(i, product);
-				return new GridRowResponse(product.getId(), product.getTimestamp());
-			}
+		try {
+			entityManager.merge(product);
+			return new GridRowResponse(product.getId(), product.getVersion());
+		} catch (OptimisticLockException ex) {
+			throw new ServiceException(ServiceException.ErrorCode.EXCEPTION_MODIFIED_BY_ANOTHER_USER, ex);
 		}
-
-		throw new ServiceException(ServiceException.ErrorCode.EXCEPTION_DB_ERROR); // record is not found
 	}
 
-	public boolean deleteProduct(int productId) throws ServiceException {
-		for (int i = 0; i < products.size(); i++) {
-			if (products.get(i).getId() == productId) {
-				products.remove(i);
-				return true;
-			}
+	@Override
+	@Transactional(rollbackFor = Throwable.class)
+	public void deleteProduct(int productId, int productVersion) throws ServiceException {
+
+		Query query = entityManager.createNamedQuery("Product.delete");
+		query.setParameter("id", productId);
+		query.setParameter("version", productVersion);
+		int numberOfRecords = query.executeUpdate();
+
+		if (numberOfRecords == 0) {
+			throw new ServiceException(ServiceException.ErrorCode.EXCEPTION_MODIFIED_BY_ANOTHER_USER);
 		}
-		return false;
 	}
 }

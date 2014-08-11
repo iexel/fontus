@@ -16,9 +16,12 @@
 
 package com.github.iexel.fontus.web.rest;
 
+import java.util.Map;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,8 +30,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.github.iexel.fontus.services.GridResponse;
 import com.github.iexel.fontus.services.GridRowResponse;
+import com.github.iexel.fontus.services.IProductsService;
 import com.github.iexel.fontus.services.Product;
-import com.github.iexel.fontus.services.ProductsService;
 import com.github.iexel.fontus.services.ServiceException;
 import com.github.iexel.fontus.web.jqgrid.JqGridRequest;
 import com.github.iexel.fontus.web.jqgrid.JqGridResponse;
@@ -37,7 +40,7 @@ import com.github.iexel.fontus.web.jqgrid.JqGridResponse;
 public class ProductsController {
 
 	@Autowired
-	private ProductsService productService;
+	private IProductsService productsService;
 
 	/*
 	 * RESTful web service used by AJAX.
@@ -46,27 +49,28 @@ public class ProductsController {
 	@RequestMapping(value = "ajax/products", method = RequestMethod.GET)
 	public JqGridResponse<Product> productsAll(JqGridRequest jqGridRequest) throws ServiceException {
 
-		GridResponse<Product> dataResponse = productService.getProducts(jqGridRequest.createDataRequest());
+		GridResponse<Product> dataResponse = productsService.getProducts(jqGridRequest.createDataRequest());
 		return new JqGridResponse<Product>(dataResponse);
 	}
 
 	@RequestMapping(value = "ajax/products", method = RequestMethod.POST)
 	public GridRowResponse createProduct(@Valid Product product) throws ServiceException {
 
-		return productService.createProduct(product);
+		return productsService.createProduct(product);
 	}
 
 	@RequestMapping(value = "ajax/products/{id}", method = RequestMethod.PUT)
 	public GridRowResponse updateProduct(@Valid Product product, @PathVariable("id") int productId) throws ServiceException {
 
 		product.setId(productId);
-		return productService.updateProduct(product);
+		return productsService.updateProduct(product);
 	}
 
 	@RequestMapping(value = "ajax/products/{id}", method = RequestMethod.DELETE)
-	public void deleteProduct(@PathVariable("id") int productId) throws ServiceException {
+	public void deleteProduct(@RequestBody MultiValueMap<String, String> formData, @PathVariable("id") int productId) throws ServiceException {
 
-		productService.deleteProduct(productId);
+		int productVersion = Integer.parseInt(formData.get("version").get(0));
+		deleteProductWrapper(productId, productVersion);
 	}
 
 	/*
@@ -96,9 +100,19 @@ public class ProductsController {
 	}
 
 	@RequestMapping(value = "rest/products/{id}", method = RequestMethod.DELETE)
-	public void deleteProductR(@PathVariable("id") int productId) throws ServiceException {
+	public void deleteProductR(@RequestBody Map<String, Integer> myJsonRequest, @PathVariable("id") int productId) throws ServiceException {
 
-		deleteProduct(productId);
+		int productVersion = myJsonRequest.get("version");
+		deleteProductWrapper(productId, productVersion);
+	}
+
+	/*
+	 * Utility methods.
+	 */
+
+	private void deleteProductWrapper(int productId, int productVersion) throws ServiceException {
+
+		productsService.deleteProduct(productId, productVersion);
 	}
 
 	// Requests for testing the external RESTful web services:
@@ -106,5 +120,4 @@ public class ProductsController {
 	// POST:____http://localhost:8080/fontus-web/rest/products_______{"name":"REST create test", "price":10.20, "timestamp":0}_____Content-Type : application/json
 	// PUT:_____http://localhost:8080/fontus-web/rest/products/4_____{"name":"REST update test", "price":10.20, "timestamp":0}_____Content-Type : application/json
 	// DELETE:__http://localhost:8080/fontus-web/rest/products/4
-
 }

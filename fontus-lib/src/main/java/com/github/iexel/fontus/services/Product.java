@@ -18,30 +18,45 @@ package com.github.iexel.fontus.services;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Version;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+@Entity
+@NamedQueries({
+	@NamedQuery(name = "Product.delete", query = "delete from Product p where p.version=:version and p.id=:id")
+})
 public class Product {
 
+	@Id
+	@GeneratedValue
 	protected int id;
+
 	@NotEmpty
 	protected String name;
+
 	@NotNull
 	@DecimalMin(value = "0", inclusive = false)
 	protected BigDecimal price;
-	protected long timestamp;
+
+	@Version
+	protected int version;
 
 	public Product() {
 	}
 
-	public Product(int id, String name, BigDecimal price, long timestamp) {
-		super();
+	public Product(int id, String name, BigDecimal price, int version) {
 		this.id = id;
 		this.name = name;
 		this.price = price;
-		this.timestamp = timestamp;
+		this.version = version;
 	}
 
 	public Product(int id, String name, BigDecimal price) {
@@ -74,12 +89,12 @@ public class Product {
 		this.price = price;
 	}
 
-	public long getTimestamp() {
-		return timestamp;
+	public int getVersion() {
+		return version;
 	}
 
-	public void setTimestamp(long timestamp) {
-		this.timestamp = timestamp;
+	public void setVersion(int version) {
+		this.version = version;
 	}
 
 	// generated automatically; equals() is used in unit testing
@@ -104,7 +119,7 @@ public class Product {
 				return false;
 		} else if (!price.equals(other.price))
 			return false;
-		if (timestamp != other.timestamp)
+		if (version != other.version)
 			return false;
 		return true;
 	}

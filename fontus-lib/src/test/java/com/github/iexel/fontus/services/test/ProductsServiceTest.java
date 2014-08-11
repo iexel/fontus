@@ -14,33 +14,15 @@
  * limitations under the License.
  */
 
-package com.github.iexel.fontus.services;
+package com.github.iexel.fontus.services.test;
 
-public class GridRowResponse {
-	protected int id;
-	protected long version;
+import org.junit.Test;
 
-	public GridRowResponse() {
-	}
+public class ProductsServiceTest {
 
-	public GridRowResponse(int id, long version) {
-		this.id = id;
-		this.version = version;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public long getVersion() {
-		return version;
-	}
-
-	public void setVersion(long version) {
-		this.version = version;
+	@Test
+	public void test() throws Exception {
+		// Testing the ProductsService class would require mocking JPA's EntityManager which is not practical. This code has already been covered by
+		// integration tests that use a real EntityManager.
 	}
 }

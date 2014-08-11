@@ -18,19 +18,24 @@ package com.github.iexel.fontus.services;
 
 public class ServiceException extends Exception {
 	private static final long serialVersionUID = 1L;
+	private ErrorCode errorCode;
 
 	public ServiceException(ErrorCode errorCode) {
 		this.errorCode = errorCode;
 	}
 
-	private final ErrorCode errorCode;
+	public ServiceException(ErrorCode errorCode, Throwable ex) {
+		super(ex);
+		this.errorCode = errorCode;
+	}
 
 	public ErrorCode getErrorCode() {
 		return errorCode;
 	}
 
-	public enum ErrorCode {
+	public static enum ErrorCode {
 		EXCEPTION_DB_ERROR, //
-		EXCEPTION_MODIFIED_BY_ANOTHER_USER
+		EXCEPTION_MODIFIED_BY_ANOTHER_USER, //
+		EXCEPTION_INVALID_SEARCH_CRITERIA;
 	}
 }

@@ -53,7 +53,6 @@ function ajaxErrorHandler(event, jqxhr, settings, exception) {
 	else if(jqxhr.responseJSON.globalErrorCode != null) {
 		// Displaying a specific error message send by the server-side code
 		window.location.href = base + "error/" + jqxhr.responseJSON.globalErrorCode;
-		//window.location.assign(base + "error/" + jqxhr.responseJSON.globalErrorCode);
 	}
 }
 

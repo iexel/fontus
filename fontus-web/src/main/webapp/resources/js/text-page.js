@@ -14,33 +14,19 @@
  * limitations under the License.
  */
 
-package com.github.iexel.fontus.services;
+$(document).ready(function() {
+	$(window).resize(resizeCodeBlocks);
+	resizeCodeBlocks();
+});
 
-public class GridRowResponse {
-	protected int id;
-	protected long version;
+function resizeCodeBlocks() {
 
-	public GridRowResponse() {
-	}
-
-	public GridRowResponse(int id, long version) {
-		this.id = id;
-		this.version = version;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public long getVersion() {
-		return version;
-	}
-
-	public void setVersion(long version) {
-		this.version = version;
+	var width = $(window).width();
+	var isLeftPanelDisplay = $(".b-left-panel").css("display");
+	
+	if(isLeftPanelDisplay == "none") {
+		$(".b-text-content").width(width - 45);
+	} else {
+		$(".b-text-content").width(width - 380);
 	}
 }

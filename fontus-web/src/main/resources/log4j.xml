@@ -47,7 +47,12 @@ limitations under the License.
 	<logger name="org.springframework">
 		<level value="warn" />
 	</logger>
-	-->
+
+	<logger name="org.hibernate">
+		<level value="DEBUG" />
+	</logger>
+-->
+
 
 	<!-- all log messages -->
 	<root>

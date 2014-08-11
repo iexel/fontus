@@ -19,6 +19,8 @@ package com.github.iexel.fontus.web.mvc;
 import java.security.Principal;
 import java.util.Locale;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -30,6 +32,8 @@ import com.github.iexel.fontus.web.jqgrid.AjaxError;
 
 @ControllerAdvice("com.github.iexel.fontus.web.mvc")
 public class GlobalControllerAdviceMvc {
+
+	private final Logger logger = LoggerFactory.getLogger(GlobalControllerAdviceMvc.class);
 
 	@ModelAttribute
 	public void loginModel(Model model, Locale locale, Principal principal) {
@@ -46,6 +50,7 @@ public class GlobalControllerAdviceMvc {
 	@ExceptionHandler(Throwable.class)
 	public String handle(Throwable ex) {
 
+		logger.error(null, ex);
 		AjaxError ajaxError = new AjaxError();
 		ajaxError.setGlobalErrorCode("error_unexpected");
 		return "forward:/error/error_unexpected";

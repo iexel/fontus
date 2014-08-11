@@ -39,6 +39,7 @@ limitations under the License.
 		<location>/error/error_unexpected</location>
 	</error-page>
 
+	<!-- The configuration of the (child) Spring MVC application context is in <servlet name>-servlet.xml by default. -->
 	<servlet>
 		<servlet-name>spring-mvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -49,13 +50,18 @@ limitations under the License.
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+	<!-- Loading the root Spring application context -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
+	<!-- Multi-file configuration of the root Spring application context -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/spring-mvc-security.xml</param-value>
+		<param-value>
+			/WEB-INF/application-context.xml
+			/WEB-INF/spring-security.xml
+		</param-value>
 	</context-param>
 
 	<!-- Spring Security filter -->
