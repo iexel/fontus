@@ -14,7 +14,7 @@ Why is it called Fontus? In the ancient Roman religion, Fontus was the god of we
 
 ###Online deployment
 
-You can check this web application online at http://demo.alexey.cloudbees.net (login: `admin`, password: `admin` for access to the protected pages). The free Java EE hosting at CloudBees provides limited resources, and the application can be slow at times.
+~~You can check this web application online at http://demo.alexey.cloudbees.net~~. CloudBees closed its application hosting servise. The site will be moved to another hosting provider.
 
 ###Licensing
 
